@@ -42,10 +42,10 @@ function slider (n) {
 
 
     var gallerySlider = [
-        'url(A:/WEB/2017/Portfolio/Brushed/images/slider-images/image01.jpg)',
-        'url(A:/WEB/2017/Portfolio/Brushed/images/slider-images/image02.jpg)',
-        'url(A:/WEB/2017/Portfolio/Brushed/images/slider-images/image03.jpg)',
-        'url(A:/WEB/2017/Portfolio/Brushed/images/slider-images/image04.jpg)'
+        'url(../images/slider-images/image01.jpg)',
+        'url(../images/slider-images/image02.jpg)',
+        'url(../images/slider-images/image03.jpg)',
+        'url(../Brushed/images/slider-images/image04.jpg)'
     ];
 
     if (sliderCount >= gallerySlider.length) {
