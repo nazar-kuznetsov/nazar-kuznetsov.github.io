@@ -45,7 +45,7 @@ function slider (n) {
         'url(../images/slider-images/image01.jpg)',
         'url(../images/slider-images/image02.jpg)',
         'url(../images/slider-images/image03.jpg)',
-        'url(../Brushed/images/slider-images/image04.jpg)'
+        'url(../images/slider-images/image04.jpg)'
     ];
 
     if (sliderCount >= gallerySlider.length) {
