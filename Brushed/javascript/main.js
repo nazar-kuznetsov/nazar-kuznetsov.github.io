@@ -1,6 +1,17 @@
 'use strict';
 
+ document.body.onload = function() {
+    setTimeout(function () {
+      var preloader = document.getElementById('preloader');
+      if (!preloader.classList.contains('done')) {
+        preloader.classList.add('done');
+      }
+    }, 1000);
+};
+
+
 // document.addEventListener("DOMContentLoaded", namFunction); вызов функцию после загрузки DOM
+
 
 
 document.getElementById('header-menu__gamburger').addEventListener('click', myFunction)
@@ -9,13 +20,19 @@ document.getElementById('header-menu__gamburger').addEventListener('click', myFu
 function myFunction() {
     this.classList.toggle("change");
     var headerMenu = document.getElementById('header-menu');
-    
+
     if (headerMenu.style.maxHeight) {
         headerMenu.style.maxHeight = null;
     } else {
         headerMenu.style.maxHeight = headerMenu.scrollHeight + 'px';
     }
 }
+
+
+
+
+
+
 
 
 
@@ -42,10 +59,10 @@ function slider (n) {
 
 
     var gallerySlider = [
-        'url(../images/slider-images/image01.jpg)',
-        'url(../images/slider-images/image02.jpg)',
-        'url(../images/slider-images/image03.jpg)',
-        'url(../images/slider-images/image04.jpg)'
+        'url(../Brushed/images/slider-images/image01.jpg)',
+        'url(../Brushed/images/slider-images/image02.jpg)',
+        'url(../Brushed/images/slider-images/image03.jpg)',
+        'url(../Brushed/images/slider-images/image04.jpg)'
     ];
 
     if (sliderCount >= gallerySlider.length) {
@@ -63,7 +80,7 @@ function slider (n) {
 
 
 // Показать скрытый popup из section Work
-document.addEventListener("DOMContentLoaded", workHiddenPopup); 
+document.addEventListener("DOMContentLoaded", workHiddenPopup);
 
 function workHiddenPopup() {
     var link = document.getElementsByClassName('examples-item_hidden-link');
@@ -83,15 +100,3 @@ function workToggle() {
         });
     }
 }
-
-var x = new Date();
-console.log(x);
-
-
-
-
-
-
-
-
-

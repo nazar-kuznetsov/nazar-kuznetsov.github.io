@@ -2,8 +2,11 @@ html {
   height: 100%;
 }
 
+
+
 li {
 	list-style: none;
+
 }
 
 input,
@@ -18,6 +21,7 @@ textarea {
 }
 
 body {
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,17 +66,17 @@ body {
   position: fixed;
   width: 100%;
   z-index: 10;
-  display: -webkit-box; 
-  display: -ms-flexbox; 
-  -webkit-box-align: center; 
-      -ms-flex-align: center; 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
           align-items: center;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;  
+          justify-content: space-between;
 }
 
 .header-menu {
@@ -97,7 +101,7 @@ body {
   padding-right: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
- 
+
 }
 
 
@@ -278,7 +282,7 @@ body {
  -webkit-box-pack: center;
      -ms-flex-pack: center;
          justify-content: center;
-   margin: 0 -15px;      
+   margin: 0 -15px;
 }
 
 .work-examples-item {
@@ -593,7 +597,7 @@ body {
 .contact-form__input::-webkit-input-placeholder { color: #686b71; }
 .contact-form__input::-moz-placeholder { color: #686b71; }
 .contact-form__input:-ms-input-placeholder { color: #686b71; }
-.contact-form__input::placeholder { color: #686b71; } 
+.contact-form__input::placeholder { color: #686b71; }
 
 .contact-inner__details__title {
   margin-bottom: 20px;
@@ -695,13 +699,19 @@ body {
 
 
 
+.preloader-background.done {
+  visibility: hidden;
+
+  opacity: 0;
+}
+
 
 
 /* Если экран меньше чем 700px (вертикальная и горизонтальная ориентация) ----------- */
-/*@media (max-width: 1000px) { 
-  
+/*@media (max-width: 1000px) {
+
 }*/
-@media (max-width: 823px) { 
+@media (max-width: 823px) {
 
   .work-inner {
     -webkit-box-orient: vertical;
@@ -811,7 +821,7 @@ body {
   z-index: 150;
   width: 100%;
   height: 100%;
-  
+
 }
 
 .work-hidden__popup {
