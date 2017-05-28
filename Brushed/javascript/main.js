@@ -100,16 +100,3 @@ function workToggle() {
         });
     }
 }
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-
->>>>>>> 4a4e421999105cabaf8807acdbe30c3ec3bdde8e
