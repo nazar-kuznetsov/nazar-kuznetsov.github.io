@@ -1,0 +1,18 @@
+.modal {
+  @include modal(red);
+}
+
+.modal.active {
+  @include modal-active();
+}
+
+.overlay {
+  @include overlay(#000, .8);
+
+
+}
+
+.overlay.active {
+  @include overlay-active();
+  
+}

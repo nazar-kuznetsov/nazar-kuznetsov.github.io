@@ -1,0 +1,40 @@
+html {
+  height: 100%;
+
+  font-size: 16px;
+}
+
+// font-family: FontAwesome;
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  line-height: 1.75;
+}
+
+p {
+  font-size: 16px;
+}
+
+.wrapper {
+  flex-grow: 1;
+}
+
+.container {
+  @include conteiner();
+}
+
+.container-fluid {
+  padding: $gutter;
+}
+
+
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}

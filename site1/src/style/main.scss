@@ -1,0 +1,49 @@
+@import 'reset';
+@import 'fonts';
+@import 'variable';
+@import 'libs';
+@import 'grid';
+@import 'mixins';
+@import 'blocks/placeholder';
+
+
+.portfolio-list {
+  @include flex();
+}
+
+.portfolio__item {
+  @include line();
+  @include col(4);
+  @include col-md(6);
+  @include col-sm(12);
+
+  position: relative;
+
+  img {
+    display: block;
+  }
+
+  &:hover .portfolio__item-overlay {
+    height: 100%;
+
+  }
+}
+
+.portfolio__item-overlay {
+  @include image-overlay(#233E59, .8);
+  cursor: pointer;
+}
+
+
+@import 'base';
+@import 'blocks/button';
+@import 'blocks/test/section-header';
+@import 'blocks/test/section';
+@import 'blocks/test/title';
+@import 'blocks/test/icon';
+
+// Block
+@import 'blocks/footer';
+
+// Media
+@import 'media'; //Всегда в конце

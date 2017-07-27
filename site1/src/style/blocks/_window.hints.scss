@@ -1,0 +1,22 @@
+.buttons-list {
+  margin: 50px;
+  @include flex();
+}
+
+.button__item {
+  position: relative;
+  @include col(3);
+
+  button {
+    display: block;
+    width: 100%;
+  }
+}
+
+.hints {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: red;
+  width: 100%;
+}

@@ -1,0 +1,59 @@
+.accardion {
+	@include flex();
+	text-align: center;
+}
+
+.accardion__item {
+	@include line();
+	@include col(12);
+	margin-bottom: 0;
+	border-bottom: 1px solid #222;
+}
+
+.accardion__title {
+	background-color: #1E90FF;
+	color: #fff;
+	padding: 10px;
+	cursor: pointer;
+	transition: background-color .5s;
+
+	&:hover {
+		background-color: #00468B;
+	}
+}
+
+.accardion__content {
+	@include accardion();
+	background-color: #000;
+	color: #fff;
+}
+
+
+
+
+
+.accardion__content-inner {
+	padding: 25px;
+}
+
+
+
+
+
+
+
+
+.google {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #B34EE9;
+	text-align: center;
+	@include accardion-width();
+}
+
+
+
+

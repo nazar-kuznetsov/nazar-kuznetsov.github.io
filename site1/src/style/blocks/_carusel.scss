@@ -1,0 +1,35 @@
+.carusel {
+  display: flex;
+  position: relative;
+  min-height: 550px;
+  border: 5px solid #222;
+}
+
+
+
+
+
+.carusel__item {
+  min-width: 100%;
+
+  color: #fff;
+  font-size: 3rem;
+
+  &.active {
+  margin-left: -100%;
+  }
+}
+
+
+
+
+.slider1 {background-color: red;}
+.slider2 {background-color: #000;}
+.slider3 {background-color: blue;}
+.slider4 {background-color: yellow;}
+.slider5 {background-color: pink;}
+.slider6 {background-color: grey;}
+.slider7 {background-color: #b34ee9;}
+.slider8 {background-color: #d7e9ce;}
+
+
