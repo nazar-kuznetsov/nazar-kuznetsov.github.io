@@ -9,13 +9,14 @@
 
 
 @import 'base';
-@import 'blocks/button';
-@import 'blocks/test/section-header';
-@import 'blocks/test/section';
-@import 'blocks/test/title';
-@import 'blocks/test/icon';
+@import 'blocks/others-style/button';
+@import 'blocks/others-style/section-header';
+@import 'blocks/others-style/section';
+@import 'blocks/others-style/title';
+@import 'blocks/others-style/icon';
 
 // Block
+@import 'blocks/page-header';
 @import 'blocks/footer';
 
 // Media
