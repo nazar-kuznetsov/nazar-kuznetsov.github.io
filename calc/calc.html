@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Блинчики</title>
   <style>
     * {
       margin: 0;
@@ -13,6 +13,9 @@
     body {
       font-size: 25px;
       background: url(bg3.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
       text-align: center;
       font-family: Arial, Helvetica, sans-serif;
       color: #222;
@@ -23,7 +26,6 @@
       max-width: 1170px;
       padding: 15px;
       margin: 0 auto;
-      background-color: rgba(0,0,0, .1);
       height: 100vh;
     }
 
@@ -91,24 +93,24 @@
 
 
   
-  let start = document.querySelector('#start');
+  var start = document.querySelector('#start');
   start.addEventListener('click', function () {
 
-    let all_weight = document.querySelector('#all_weight');
-    let pcs = document.querySelector('#pcs');
-    let list = document.querySelector('.list');
+    var all_weight = document.querySelector('#all_weight');
+    var pcs = document.querySelector('#pcs');
+    var list = document.querySelector('.list');
     list.innerHTML = '';
-    let num_weight = parseInt(all_weight.value);
-    let num_pcs = parseInt(pcs.value);
-    let calc = Math.floor(num_weight / num_pcs);
-    let h1 = document.querySelector('h1');
+    var num_weight = parseInt(all_weight.value);
+    var num_pcs = parseInt(pcs.value);
+    var calc = Math.floor(num_weight / num_pcs);
+    var h1 = document.querySelector('h1');
     h1.innerText = "По " + calc + "грамм ";
-    let h2 = document.createElement("h2");
+    var h2 = document.createElement("h2");
 
 
     console.log(calc);
-    for ( let i = 1; i <= num_pcs; i++ ) {
-      let span = document.createElement('span');
+    for ( var i = 1; i <= num_pcs; i++ ) {
+      var span = document.createElement('span');
       span.classList.add('span');
       span.textContent = num_weight -= calc;
       list.appendChild(span);
