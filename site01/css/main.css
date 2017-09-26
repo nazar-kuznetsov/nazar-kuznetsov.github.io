@@ -130,7 +130,6 @@ blockquote:after,
 q:before,
 q:after {
   content: '';
-  content: none;
 }
 
 table {
@@ -209,8 +208,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   overflow: hidden;
-  border-left: 1px solid red;
-  border-right: 1px solid red;
 }
 
 .container-fluid {
@@ -411,6 +408,10 @@ h6 {
 
 .services {
   padding: 80px 0;
+}
+
+.services .section-header {
+  color: #222;
 }
 
 .advantages {
@@ -769,7 +770,7 @@ h6 {
   display: flex;
   flex-wrap: wrap;
   flex-wrap: nowrap;
-  transition: transform 1s;
+  transition: transform .8s;
   transform: translateX(0);
 }
 
@@ -808,13 +809,42 @@ h6 {
   text-align: center;
 }
 
+.sustomers__slider-dots {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.sustomers__slider-dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #999595;
+  cursor: pointer;
+}
+
+.sustomers__slider-dot.active {
+  background-color: #fff;
+}
+
+.sustomers-words__feedback {
+  font-size: 2rem;
+  color: #F44336;
+  font-weight: 500;
+}
+
 .sustomers-words__picture {
+  text-align: center;
   margin-left: 15px;
   margin-right: 15px;
   margin-bottom: 30px;
   box-sizing: border-box;
   word-wrap: break-word;
   width: calc( 100% / 12 * 4 - 30px);
+}
+
+.sustomers-words__picture img {
+  width: 100%;
 }
 
 .sustomers-words__dest {
@@ -886,6 +916,14 @@ h6 {
   .progress__item {
     width: calc( 100% / 12 * 5 - 30px);
   }
+
+  .sustomers-words__picture {
+    width: calc( 100% / 12 * 12 - 30px);
+  }
+
+  .sustomers-words__dest {
+    width: calc( 100% / 12 * 12 - 30px);
+  }
 }
 
 @media (max-width: 578px) {
@@ -900,6 +938,10 @@ h6 {
   .price__table-item {
     width: calc( 100% / 12 * 12 - 30px);
   }
+
+  .sustomers-words__user {
+    width: calc( 100% / 12 * 10 - 30px);
+  }
 }
 
 @media (max-width: 450px) {
@@ -908,6 +950,10 @@ h6 {
   }
 
   .progress__item {
+    width: calc( 100% / 12 * 12 - 30px);
+  }
+
+  .sustomers-words__user {
     width: calc( 100% / 12 * 12 - 30px);
   }
 }
