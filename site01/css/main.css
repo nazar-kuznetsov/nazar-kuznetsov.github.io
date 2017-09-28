@@ -1336,8 +1336,17 @@ textarea {
     background-color: #EEEEEE;
   }
 
-  .header__menu-item:hover > ul {
-    opacity: 0;
+  .header__menu-item ul {
+    position: static;
+    opacity: 1;
+    overflow: hidden;
+    background-color: none;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .header__menu-item ul li a {
+    padding-left: 40px;
   }
 
   .header__menu-dropdown {
