@@ -28,18 +28,40 @@
       <div class="container">
         <div class="header__nav-inner">
           <div class="header__logo">
-            <a href="#" class="header__logo-link">Geekhub Javascript</a>
+            <a href="javascript:void(0);" class="header__logo-link">Geekhub Javascript</a>
           </div>
           <ul class="header__menu-list">
-            <li class="header__menu-item"><a href="" class="header__menu-link">Home</a></li>
-            <li class="header__menu-item"><a href="" class="header__menu-link">Layout</a></li>
-            <li class="header__menu-item"><a href="" class="header__menu-link">Features</a></li>
-            <li class="header__menu-item"><a href="" class="header__menu-link">About</a></li>
-            <li class="header__menu-item"><a href="" class="header__menu-link">Sections</a></li>
+            <li class="header__menu-item"><a href="javascript:void(0);" class="header__menu-link">Home</a></li>
+            <li class="header__menu-item"><a href="javascript:void(0);" class="header__menu-link arrow_down">Layout</a>
+              <ul>
+                <li><a href="javascript:void(0);">Fullscreen Slider</a></li>
+                <li><a href="javascript:void(0);">Fullscreen Hero Image</a></li>
+                <li><a href="javascript:void(0);">Hero Background Video</a></li>
+              </ul>
+            </li>
+            <li class="header__menu-item"><a href="javascript:void(0);" class="header__menu-link">Features</a></li>
+            <li class="header__menu-item"><a href="javascript:void(0);" class="header__menu-link">About</a></li>
+            <li class="header__menu-item"><a href="javascript:void(0);" class="header__menu-link arrow_down">Sections</a>
+              <ul>
+                <li><a href="">Customer's words</a></li>
+                <li><a href="">Tutorial</a></li>
+                <li><a href="">Feedback</a></li>
+                <li><a href="">Slider</a></li>
+              </ul>
+            </li> 
           </ul>
+          <a class="header__menu-dropdown" data-modal=".header__menu-list" href="javascript:void(0);"></a>
         </div>
       </div>
     </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="header__slider">
       <ul class="header__slider-list">
         <li class="header__slider-item">Geekhub</li>
@@ -54,8 +76,8 @@
           <span class="slider-dot" data-carousel-circle="1"></span>
           <span class="slider-dot" data-carousel-circle="2"></span>
         </div>
-        <a class="header__slider-prev"></a>
-        <a class="header__slider-next"></a>
+        <a href="javascript:void(0);" class="header__slider-prev"></a>
+        <a href="javascript:void(0);" class="header__slider-next"></a>
       </div>
     </div>
   </header>
@@ -367,7 +389,7 @@
       </header>
       <div class="contact-inner">
         <div class="contact-map">
-          <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:100%;width:100%;'><div id='gmap_canvas' style='height:400px;width:100%;'></div></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><script type='text/javascript'>function init_map(){var myOptions = {zoom:17,center:new google.maps.LatLng(49.4260427,32.09451560000002),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(49.4260427,32.09451560000002)});infowindow = new google.maps.InfoWindow({content:'<strong>Geekhub Javascript</strong><br> Черкассы Дом Евангелия<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1297.566724922368!2d32.09506383243637!3d49.42529101132217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d14ba5f02d07d5%3A0x3324e945f89c99c6!2z0JTQvtC8INCV0LLQsNC90LPQtdC70LjRjw!5e0!3m2!1sru!2sus!4v1506617063291" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
         <form class="contact-form" method="POST" action="#">
           <div class="contact-form__full-name">
@@ -691,10 +713,13 @@
       </div>
     </div>
   </section>
-  <!-- 
-    3, header fixed
+  <!--
+    1. Добавить ссылки
+    2. добавить анимацию появление 
     4. nav responsive
-    5. wellcome
+    3, акардион в меню
+    5. уменшить стрелки на экране велком
+
    -->
   </div>
   <!--Footer-->
