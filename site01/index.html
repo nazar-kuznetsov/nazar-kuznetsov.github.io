@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-  <title>Название Документа</title>
+  <title>Кузнецов Назар</title>
   <meta charset="UTF-8">
   <!-- Description of the site -->
-  <meta name="description" content="Здесь описание веб страницы">
-  <meta name="keywords" content="Здесь ключевый слова веб страницы">
+  <meta name="description" content="Geekhub Javascript">
+  <meta name="keywords" content="Geekhub Javascript">
   <meta name="author" content="Nazar Kuznetsov">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/favicon/favicon.ico.png" type="image/x-icon">
@@ -23,6 +23,42 @@
     </div>
   </div>
   <div class="wrapper">
+  <header class="header">
+    <nav class="header__nav">
+      <div class="container">
+        <div class="header__nav-inner">
+          <div class="header__logo">
+            <a href="#" class="header__logo-link">Geekhub Javascript</a>
+          </div>
+          <ul class="header__menu-list">
+            <li class="header__menu-item"><a href="" class="header__menu-link">Home</a></li>
+            <li class="header__menu-item"><a href="" class="header__menu-link">Layout</a></li>
+            <li class="header__menu-item"><a href="" class="header__menu-link">Features</a></li>
+            <li class="header__menu-item"><a href="" class="header__menu-link">About</a></li>
+            <li class="header__menu-item"><a href="" class="header__menu-link">Sections</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="header__slider">
+      <ul class="header__slider-list">
+        <li class="header__slider-item">Geekhub</li>
+        <li class="header__slider-item">JavaScript</li>
+        <li class="header__slider-item">2017</li>
+      </ul>
+    </div>
+    <div class="controll-inner">
+      <div class="header__slider-controll">
+        <div class="header__slider-dots">
+          <span class="slider-dot active" data-carousel-circle="0"></span>
+          <span class="slider-dot" data-carousel-circle="1"></span>
+          <span class="slider-dot" data-carousel-circle="2"></span>
+        </div>
+        <a class="header__slider-prev"></a>
+        <a class="header__slider-next"></a>
+      </div>
+    </div>
+  </header>
   <section class="features">
     <ul class="features__list">
       <li class="features__item bg-pink">
@@ -321,6 +357,42 @@
     </div>
     <span class="close-modal"></span>
   </div>
+  <section class="contact">
+    <div class="container">
+      <header class="section-header">
+        <h2 class="section-header__title">Contact Us</h2>
+        <p class="section-header__sub-title">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+        </p>
+      </header>
+      <div class="contact-inner">
+        <div class="contact-map">
+          <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:100%;width:100%;'><div id='gmap_canvas' style='height:400px;width:100%;'></div></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><script type='text/javascript'>function init_map(){var myOptions = {zoom:17,center:new google.maps.LatLng(49.4260427,32.09451560000002),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(49.4260427,32.09451560000002)});infowindow = new google.maps.InfoWindow({content:'<strong>Geekhub Javascript</strong><br> Черкассы Дом Евангелия<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+        </div>
+        <form class="contact-form" method="POST" action="#">
+          <div class="contact-form__full-name">
+            <div class="contact-form__first-name">
+              <input class="input" type="text" placeholder="First-Name" required="required">
+            </div>
+            <div class="contact-form__last-name">
+              <input class="input" type="text" placeholder="Last-Name" required="required">
+            </div>
+          </div>
+          <div class="contact-form__email">
+            <input class="input" type="email" placeholder="Email" required="required">
+          </div>
+          <div class="contact-form__theme">
+            <input class="input" type="text" placeholder="Message Theme" required="required">
+          </div>
+          <div class="contact-form__message">
+            <textarea class="input" placeholder="Message Text" name="" id="" cols="30" rows="10" required="required"></textarea>
+          </div>
+          <input class="contact-form__submit button" type="submit" value="submit">
+        </form>
+      </div> 
+      </div>
+    </div>
+  </section>
   <section class="progress">
     <div class="container">
       <header class="section-header">
@@ -490,6 +562,11 @@
             <figure class="sustomers-words__picture">
               <img src="img/Customer's Words/face1.jpg" alt="">
               <figcaption class="sustomers-words__authors-name">Julia Kann</figcaption>
+              <div class="social">
+                <a class="social__icons social__icons-facebook" href="javascript:void(0);"></a>
+                <a class="social__icons social__icons-twitter" href="javascript:void(0);"></a>
+                <a class="social__icons social__icons-instagram" href="javascript:void(0);"></a>
+              </div>
             </figure>
             <div class="sustomers-words__dest">
               <strong class="sustomers-words__feedback">"Exellent..."</strong>
@@ -509,17 +586,22 @@
             <figure class="sustomers-words__picture">
               <img src="img/Customer's Words/face2.jpg" alt="">
               <figcaption class="sustomers-words__authors-name">Adrianne Weil</figcaption>
+              <div class="social">
+                <a class="social__icons social__icons-facebook" href="javascript:void(0);"></a>
+                <a class="social__icons social__icons-twitter" href="javascript:void(0);"></a>
+                <a class="social__icons social__icons-instagram" href="javascript:void(0);"></a>
+              </div>
             </figure>
             <div class="sustomers-words__dest">
               <strong class="sustomers-words__feedback">"100% Satisfied..."</strong>
               <blockquote>
-                  I first used Rev.com when our biggest client needed individual depth interview transcripts
-                  faster than we have ever delivered them before. And after submitting
-                  my first batch of interviews for transcription, I found Rev.com's work
-                  highly accurate, and so fast, it was dizzying. I submitted 16 hour
-                  long files for transcription, and they were all back to me within 24
-                  hours.
-                </blockquote>
+                I first used Rev.com when our biggest client needed individual depth interview transcripts
+                faster than we have ever delivered them before. And after submitting
+                my first batch of interviews for transcription, I found Rev.com's work
+                highly accurate, and so fast, it was dizzying. I submitted 16 hour
+                long files for transcription, and they were all back to me within 24
+                hours.
+              </blockquote>
             </div>
           </div>
         </li>
@@ -528,17 +610,22 @@
             <figure class="sustomers-words__picture">
               <img src="img/Customer's Words/face3.jpg" alt="">
               <figcaption class="sustomers-words__authors-name">Alison Claire</figcaption>
+              <div class="social">
+                <a class="social__icons social__icons-facebook" href="javascript:void(0);"></a>
+                <a class="social__icons social__icons-twitter" href="javascript:void(0);"></a>
+                <a class="social__icons social__icons-instagram" href="javascript:void(0);"></a>
+              </div>
             </figure>
             <div class="sustomers-words__dest">
               <strong class="sustomers-words__feedback">"Perfects..."</strong>
               <blockquote>
-                  I first used Rev.com when our biggest client needed individual depth interview transcripts
-                  faster than we have ever delivered them before. And after submitting
-                  my first batch of interviews for transcription, I found Rev.com's work
-                  highly accurate, and so fast, it was dizzying. I submitted 16 hour
-                  long files for transcription, and they were all back to me within 24
-                  hours.
-                </blockquote>
+                I first used Rev.com when our biggest client needed individual depth interview transcripts
+                faster than we have ever delivered them before. And after submitting
+                my first batch of interviews for transcription, I found Rev.com's work
+                highly accurate, and so fast, it was dizzying. I submitted 16 hour
+                long files for transcription, and they were all back to me within 24
+                hours.
+              </blockquote>
             </div>
           </div>
         </li>
@@ -547,17 +634,22 @@
             <figure class="sustomers-words__picture">
               <img src="img/Customer's Words/face4.jpg" alt="">
               <figcaption class="sustomers-words__authors-name">Rachel Deborah</figcaption>
+              <div class="social">
+                <a class="social__icons social__icons-facebook" href="javascript:void(0);"></a>
+                <a class="social__icons social__icons-twitter" href="javascript:void(0);"></a>
+                <a class="social__icons social__icons-instagram" href="javascript:void(0);"></a>
+              </div>
             </figure>
             <div class="sustomers-words__dest">
               <strong class="sustomers-words__feedback">"Good..."</strong>
               <blockquote>
-                  I first used Rev.com when our biggest client needed individual depth interview transcripts
-                  faster than we have ever delivered them before. And after submitting
-                  my first batch of interviews for transcription, I found Rev.com's work
-                  highly accurate, and so fast, it was dizzying. I submitted 16 hour
-                  long files for transcription, and they were all back to me within 24
-                  hours.
-                </blockquote>
+                I first used Rev.com when our biggest client needed individual depth interview transcripts
+                faster than we have ever delivered them before. And after submitting
+                my first batch of interviews for transcription, I found Rev.com's work
+                highly accurate, and so fast, it was dizzying. I submitted 16 hour
+                long files for transcription, and they were all back to me within 24
+                hours.
+              </blockquote>
             </div>
           </div>
         </li>
@@ -566,27 +658,32 @@
             <figure class="sustomers-words__picture">
               <img src="img/Customer's Words/face5.jpg" alt="">
               <figcaption class="sustomers-words__authors-name">Sarah Joanne</figcaption>
+              <div class="social">
+                <a class="social__icons social__icons-facebook" href="javascript:void(0);"></a>
+                <a class="social__icons social__icons-twitter" href="javascript:void(0);"></a>
+                <a class="social__icons social__icons-instagram" href="javascript:void(0);"></a>
+              </div>
             </figure>
             <div class="sustomers-words__dest">
               <strong class="sustomers-words__feedback">"I like it..."</strong>
               <blockquote>
-                  I first used Rev.com when our biggest client needed individual depth interview transcripts
-                  faster than we have ever delivered them before. And after submitting
-                  my first batch of interviews for transcription, I found Rev.com's work
-                  highly accurate, and so fast, it was dizzying. I submitted 16 hour
-                  long files for transcription, and they were all back to me within 24
-                  hours.
-                </blockquote>
+                I first used Rev.com when our biggest client needed individual depth interview transcripts
+                faster than we have ever delivered them before. And after submitting
+                my first batch of interviews for transcription, I found Rev.com's work
+                highly accurate, and so fast, it was dizzying. I submitted 16 hour
+                long files for transcription, and they were all back to me within 24
+                hours.
+              </blockquote>
             </div>
           </div>
         </li>
       </ul>
       <div class="sustomers__slider-dots">
-        <span class="sustomers__slider-dot active" data-carousel-circle="0"></span>
-        <span class="sustomers__slider-dot" data-carousel-circle="1"></span>
-        <span class="sustomers__slider-dot" data-carousel-circle="2"></span>
-        <span class="sustomers__slider-dot" data-carousel-circle="3"></span>
-        <span class="sustomers__slider-dot" data-carousel-circle="4"></span>
+        <span class="slider-dot active" data-carousel-circle="0"></span>
+        <span class="slider-dot" data-carousel-circle="1"></span>
+        <span class="slider-dot" data-carousel-circle="2"></span>
+        <span class="slider-dot" data-carousel-circle="3"></span>
+        <span class="slider-dot" data-carousel-circle="4"></span>
       </div>
       <div class="sustomers-words__controll-panel">
         <button id="slide-prev" class="button">Prev</button>
@@ -595,63 +692,71 @@
     </div>
   </section>
   <!-- 
-    1,The Showcase
-    4,Our Prices
+    3, header fixed
+    4. nav responsive
+    5. wellcome
    -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
   </div>
   <!--Footer-->
   <footer class="footer">
-    footer
+  
+    <section class="footer__back-top">
+      <div class="container">
+        <a class="ic on icon__arrow-top" href="#">&#11014;</a>
+      </div>
+    </section>
+  
+    <section class="footer__menu">
+      <div class="container">
+        <div class="footer__menu-inner">
+          <div class="footer__menu-desc">
+            <h6 class="footer__menu-title">Geekhub JavaScript</h6>
+            <p>
+              'Materializer' is a HTML landing page template designed within Google's Material
+              Design guidelines. The responsive One Page template comes with 3 header
+              options: Hero image, Slideshow or Video background. Other features include
+              sticky header with smooth scroll within the long page, 200 vector scalable
+              icons, background parallax scrolling effect in some sections, embedded
+              Lightbox gallery and a contact form with validation.
+            </p>
+          </div>
+          <div class="footer__menu-categories">
+            <h6 class="footer__menu-title">Categories</h6>
+            <ul class="footer__menu__list">
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Header</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Featured Works</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Featured Portfilio</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Team</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Store</a></li>
+            </ul>
+          </div>
+          <div class="footer__menu-themes">
+            <h6 class="footer__menu-title">Neuethemes</h6>
+            <ul class="footer__menu__list">
+              <li class="footer__menu-item"><a class="footer__menu-link" href="">Official Site</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="">There are many variations</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="">of passages of Lorem Ipsum</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="">vailable, but the majority</a></li>
+            </ul>
+          </div>
+          <div class="footer__menu-follow">
+            <h6 class="footer__menu-title">Follow Us</h6>
+            <ul class="footer__menu__list" class="footer__menu-item">
+              <li class="footer__menu-item"><a class="footer__menu-link" href="">Google Plus</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="">Twitter</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="footer__copyright">
+      <div class="container">
+        <a class="made-by" href="javascript:void(0);">Made by Nazar Kuznetsov</a>
+      </div>
+    </section>
+  
   </footer>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
