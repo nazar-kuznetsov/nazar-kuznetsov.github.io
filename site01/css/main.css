@@ -308,7 +308,7 @@ h6 {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#1D729E',GradientType=1 );
   position: relative;
   height: 100vh;
-  min-height: 450px;
+  min-height: 550px;
 }
 
 .header .container {
