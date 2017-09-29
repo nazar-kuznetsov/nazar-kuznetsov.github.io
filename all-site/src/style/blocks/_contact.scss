@@ -11,6 +11,10 @@
   @include line();
   @include col(6);
   @include col-lg(12);
+  iframe {
+    width: 100%;
+    height: 500px;
+  }
 }
 
 .contact-form {
@@ -66,7 +70,4 @@ textarea {
   
 }
 
-// input:focus::-webkit-input-placeholder {
-//   color: red;
-// }
 
