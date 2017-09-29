@@ -10,7 +10,7 @@
   <meta name="author" content="Nazar Kuznetsov">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/favicon/favicon.ico.png" type="image/x-icon">
-  <!-- <link rel="stylesheet" href="libs/preloader/preloader.css"> -->
+  <link rel="stylesheet" href="libs/preloader/preloader.css">
 </head>
 
 <body>
@@ -23,14 +23,15 @@
     </div>
   </div>
   <div class="wrapper">
-  <header class="header">
+  <header id="header" class="header">
     <nav class="header__nav">
       <div class="container">
         <div class="header__nav-inner">
-          <div class="header__logo">
-            <a href="javascript:void(0);" class="header__logo-link">Geek<span>hub</span> Javascript</a>
+          <div class="header__logo animated bounceInLeft">
+            <a href="javascript:void(0);" class="header__logo-link">Geekhub JavaScript</a>
           </div>
-          <ul class="header__menu-list">
+          <ul class="header__menu-list animated bounceInRight">
+            <li class="header__menu-close">&#10006;</li>
             <li class="header__menu-item"><a href="javascript:void(0);" class="header__menu-link icon icon-home">Home</a></li>
             <li class="header__menu-item"><a href="javascript:void(0);" class="header__menu-link arrow_down icon icon-cogs header__menu-link-drop">Layout</a>
               <ul class="header__menu-drop">
@@ -42,10 +43,10 @@
             <li class="header__menu-item"><a href="javascript:void(0);" class="header__menu-link icon icon-cap">Features</a></li>
             <li class="header__menu-item"><a href="javascript:void(0);" class="header__menu-link header__menu-link-drop arrow_down icon icon-folder">Sections</a>
               <ul class="header__menu-drop">
-                <li><a href="">Customer's words</a></li>
-                <li><a href="">Tutorial</a></li>
-                <li><a href="">Feedback</a></li>
-                <li><a href="">Slider</a></li>
+                <li><a href="javascript:void(0);">Customer's words</a></li>
+                <li><a href="javascript:void(0);">Tutorial</a></li>
+                <li><a href="javascript:void(0);">Feedback</a></li>
+                <li><a href="javascript:void(0);">Slider</a></li>
               </ul>
             </li> 
             <li class="header__menu-item"><a href="javascript:void(0);" class="header__menu-link icon icon-about">About</a></li>
@@ -73,7 +74,7 @@
       </div>
     </div>
   </header>
-  <section class="features">
+  <section id="features" class="features">
     <ul class="features__list">
       <li class="features__item bg-pink">
         <h3 class="features__text-title icon-star">Material Design</h3>
@@ -105,37 +106,183 @@
     <div class="container">
       <ul class="steps-implementation">
         <li class="steps-implementation__item">
-          <h2 class="steps-implementation__title icon-desing">Design</h2>
+          <h2 class="steps-implementation__title icon-desing wow zoomIn">Design</h2>
           <p class="steps-implementation__text">
             Curabitur eu nulla eget ligula laoreet auctor. Integer eu ultricies justo. Integer tortor nunc, tempor rutrum elementum vel, porttitor ac leo. 
           </p>
         </li>
         <li class="steps-implementation__item">
-          <h2 class="steps-implementation__title icon-comment">Implementation</h2>
+          <h2 class="steps-implementation__title icon-comment wow zoomIn">Implementation</h2>
           <p class="steps-implementation__text">
             Curabitur eu nulla eget ligula laoreet auctor. Integer eu ultricies justo. Integer tortor nunc, tempor rutrum elementum vel, porttitor ac leo. 
           </p>
         </li>
         <li class="steps-implementation__item">
-          <h2 class="steps-implementation__title icon-feedback">Feedback</h2>
+          <h2 class="steps-implementation__title icon-feedback wow zoomIn">Feedback</h2>
           <p class="steps-implementation__text">
             Curabitur eu nulla eget ligula laoreet auctor. Integer eu ultricies justo. Integer tortor nunc, tempor rutrum elementum vel, porttitor ac leo. 
           </p>
         </li>
       </ul>
       <div class="steps-implementation__order">
-        <a href="#" class="steps-implementation__order-btn button">Buy Template</a>
+        <a href="#" class="steps-implementation__order-btn button wow slideInUp">Buy Template</a>
+      </div>
+    </div>
+  </section>
+  <section class="sustomers-words">
+    <div class="container">
+      <header class="section-header">
+        <h2 class="section-header__title wow fadeInDown">Customer's Words</h2>
+        <p class="section-header__sub-title">What our Customers are telling about us</p>
+      </header>
+      <ul class="sustomers-words__list wow fadeInRight">
+        <li class="sustomers-words__card">
+          <div class="sustomers-words__user">
+            <figure class="sustomers-words__picture">
+              <img src="img/Customer's Words/face1.jpg" alt="">
+              <figcaption class="sustomers-words__authors-name">Julia Kann</figcaption>
+              <div class="social">
+                <a class="social__icons social__icons-facebook" href="https://www.facebook.com" target="_blank"></a>
+                <a class="social__icons social__icons-twitter" href="https://twitter.com" target="_blank"></a>
+                <a class="social__icons social__icons-instagram" href="https://www.instagram.com"
+                  target="_blank"></a>
+              </div>
+            </figure>
+            <div class="sustomers-words__dest">
+              <strong class="sustomers-words__feedback">"Exellent..."</strong>
+              <blockquote>
+                I first used Rev.com when our biggest client needed individual depth interview transcripts
+                faster than we have ever delivered them before. And after submitting
+                my first batch of interviews for transcription, I found Rev.com's work
+                highly accurate, and so fast, it was dizzying. I submitted 16 hour
+                long files for transcription, and they were all back to me within 24
+                hours.
+              </blockquote>
+            </div>
+          </div>
+        </li>
+        <li class="sustomers-words__card">
+          <div class="sustomers-words__user">
+            <figure class="sustomers-words__picture">
+              <img src="img/Customer's Words/face2.jpg" alt="">
+              <figcaption class="sustomers-words__authors-name">Adrianne Weil</figcaption>
+              <div class="social">
+                <a class="social__icons social__icons-facebook" href="https://www.facebook.com" target="_blank"></a>
+                <a class="social__icons social__icons-twitter" href="https://twitter.com" target="_blank"></a>
+                <a class="social__icons social__icons-instagram" href="https://www.instagram.com"
+                  target="_blank"></a>
+              </div>
+            </figure>
+            <div class="sustomers-words__dest">
+              <strong class="sustomers-words__feedback">"100% Satisfied..."</strong>
+              <blockquote>
+                I first used Rev.com when our biggest client needed individual depth interview transcripts
+                faster than we have ever delivered them before. And after submitting
+                my first batch of interviews for transcription, I found Rev.com's work
+                highly accurate, and so fast, it was dizzying. I submitted 16 hour
+                long files for transcription, and they were all back to me within 24
+                hours.
+              </blockquote>
+            </div>
+          </div>
+        </li>
+        <li class="sustomers-words__card">
+          <div class="sustomers-words__user">
+            <figure class="sustomers-words__picture">
+              <img src="img/Customer's Words/face3.jpg" alt="">
+              <figcaption class="sustomers-words__authors-name">Alison Claire</figcaption>
+              <div class="social">
+                <a class="social__icons social__icons-facebook" href="https://www.facebook.com" target="_blank"></a>
+                <a class="social__icons social__icons-twitter" href="https://twitter.com" target="_blank"></a>
+                <a class="social__icons social__icons-instagram" href="https://www.instagram.com"
+                  target="_blank"></a>
+              </div>
+            </figure>
+            <div class="sustomers-words__dest">
+              <strong class="sustomers-words__feedback">"Perfects..."</strong>
+              <blockquote>
+                I first used Rev.com when our biggest client needed individual depth interview transcripts
+                faster than we have ever delivered them before. And after submitting
+                my first batch of interviews for transcription, I found Rev.com's work
+                highly accurate, and so fast, it was dizzying. I submitted 16 hour
+                long files for transcription, and they were all back to me within 24
+                hours.
+              </blockquote>
+            </div>
+          </div>
+        </li>
+        <li class="sustomers-words__card">
+          <div class="sustomers-words__user">
+            <figure class="sustomers-words__picture">
+              <img src="img/Customer's Words/face4.jpg" alt="">
+              <figcaption class="sustomers-words__authors-name">Rachel Deborah</figcaption>
+              <div class="social">
+                <a class="social__icons social__icons-facebook" href="https://www.facebook.com" target="_blank"></a>
+                <a class="social__icons social__icons-twitter" href="https://twitter.com" target="_blank"></a>
+                <a class="social__icons social__icons-instagram" href="https://www.instagram.com"
+                  target="_blank"></a>
+              </div>
+            </figure>
+            <div class="sustomers-words__dest">
+              <strong class="sustomers-words__feedback">"Good..."</strong>
+              <blockquote>
+                I first used Rev.com when our biggest client needed individual depth interview transcripts
+                faster than we have ever delivered them before. And after submitting
+                my first batch of interviews for transcription, I found Rev.com's work
+                highly accurate, and so fast, it was dizzying. I submitted 16 hour
+                long files for transcription, and they were all back to me within 24
+                hours.
+              </blockquote>
+            </div>
+          </div>
+        </li>
+        <li class="sustomers-words__card">
+          <div class="sustomers-words__user">
+            <figure class="sustomers-words__picture">
+              <img src="img/Customer's Words/face5.jpg" alt="">
+              <figcaption class="sustomers-words__authors-name">Sarah Joanne</figcaption>
+              <div class="social">
+                <a class="social__icons social__icons-facebook" href="https://www.facebook.com" target="_blank"></a>
+                <a class="social__icons social__icons-twitter" href="https://twitter.com" target="_blank"></a>
+                <a class="social__icons social__icons-instagram" href="https://www.instagram.com"
+                  target="_blank"></a>
+              </div>
+            </figure>
+            <div class="sustomers-words__dest">
+              <strong class="sustomers-words__feedback">"I like it..."</strong>
+              <blockquote>
+                I first used Rev.com when our biggest client needed individual depth interview transcripts
+                faster than we have ever delivered them before. And after submitting
+                my first batch of interviews for transcription, I found Rev.com's work
+                highly accurate, and so fast, it was dizzying. I submitted 16 hour
+                long files for transcription, and they were all back to me within 24
+                hours.
+              </blockquote>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="sustomers__slider-dots">
+        <span class="slider-dot active" data-carousel-circle="0"></span>
+        <span class="slider-dot" data-carousel-circle="1"></span>
+        <span class="slider-dot" data-carousel-circle="2"></span>
+        <span class="slider-dot" data-carousel-circle="3"></span>
+        <span class="slider-dot" data-carousel-circle="4"></span>
+      </div>
+      <div class="sustomers-words__controll-panel">
+        <button id="slide-prev" class="button wow slideInLeft">Prev</button>
+        <button id="slide-next" class="button wow slideInRight">Next</button>
       </div>
     </div>
   </section>
   <section class="services">
     <div class="container">
       <header class="section-header">
-        <h2 class="section-header__title">Our Services</h2>
+        <h2 class="section-header__title wow fadeInDown">Our Services</h2>
         <p class="section-header__sub-title">What we offer to our Customers. Brief list.</p>
       </header>
       <ul class="advantages">
-        <li class="advantages__item">
+        <li class="advantages__item wow fadeInLeft">
           <div class="advantages__icon icon-desing"></div>
           <div class="advantages__info">
             <h3 class="advantages__title">Hi-end Design</h3>
@@ -157,7 +304,7 @@
             <a class="advantages__info-lear-more" data-modal=".implementation" href="javascript:void(0);">Learn more</a>
           </div>
         </li>
-        <li class="advantages__item">
+        <li class="advantages__item wow fadeInRight">
           <div class="advantages__icon icon-comment"></div>
           <div class="advantages__info">
             <h3 class="advantages__title">Support</h3>
@@ -168,7 +315,7 @@
             <a class="advantages__info-lear-more" data-modal=".support" href="javascript:void(0);">Learn more</a>
           </div>
         </li>
-        <li class="advantages__item">
+        <li class="advantages__item wow fadeInLeft">
           <div class="advantages__icon icon-clock"></div>
           <div class="advantages__info">
             <h3 class="advantages__title">Compatibility</h3>
@@ -190,7 +337,7 @@
             <a class="advantages__info-lear-more" data-modal=".safety" href="javascript:void(0);">Learn more</a>
           </div>
         </li>
-        <li class="advantages__item">
+        <li class="advantages__item wow fadeInRight">
           <div class="advantages__icon icon-retweet"></div>
           <div class="advantages__info">
             <h3 class="advantages__title">Violatility</h3>
@@ -371,19 +518,73 @@
     </div>
     <span class="close-modal"></span>
   </div>
+  <section class="progress">
+    <div class="container">
+      <header class="section-header">
+        <h2 class="section-header__title wow fadeInDown">Work in Progress</h2>
+        <p class="section-header__sub-title">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum
+          consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames
+          ac ante ipsum primis in faucibus.
+        </p>
+      </header>
+      <ul class="progress__list">
+        <li class="progress__item">
+          <figure>
+            <img class="progress__img wow bounceIn" data-modal=".villa-modal" src="img/progress/progress1.jpg" alt="Картинка">
+            <figcaption class="progress__title">Vvoghts Villa</figcaption>
+          </figure>
+          <span class="progress__sub-title">Interior Design</span>
+          <p class="progress__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </li>
+        <li class="progress__item">
+          <figure>
+            <img class="progress__img wow bounceIn" data-modal=".cafe-modal" src="img/progress/progress2.jpg" alt="Картинка">
+            <figcaption class="progress__title">Cafe D'Light</figcaption>
+          </figure>
+          <span class="progress__sub-title">Architecture</span>
+          <p class="progress__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </li>
+        <li class="progress__item">
+          <figure>
+            <img class="progress__img wow bounceIn" data-modal=".furniture-modal" src="img/progress/progress3.jpg" alt="Картинка">
+            <figcaption class="progress__title">Furniture</figcaption>
+          </figure>
+          <span class="progress__sub-title">Product Design</span>
+          <p class="progress__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </li>
+        <li class="progress__item">
+          <figure>
+            <img class="progress__img wow bounceIn" data-modal=".features-modal" src="img/progress/progress4.jpg" alt="Картинка">
+            <figcaption class="progress__title">Features</figcaption>
+          </figure>
+          <span class="progress__sub-title">Light Design</span>
+          <p class="progress__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
   <section class="contact">
     <div class="container">
       <header class="section-header">
-        <h2 class="section-header__title">Contact Us</h2>
+        <h2 class="section-header__title wow fadeInDown">Contact Us</h2>
         <p class="section-header__sub-title">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.
         </p>
       </header>
       <div class="contact-inner">
-        <div class="contact-map">
+        <div class="contact-map wow fadeInLeft">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1297.566724922368!2d32.09506383243637!3d49.42529101132217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d14ba5f02d07d5%3A0x3324e945f89c99c6!2z0JTQvtC8INCV0LLQsNC90LPQtdC70LjRjw!5e0!3m2!1sru!2sus!4v1506617063291" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
-        <form class="contact-form" method="POST" action="#">
+        <form class="contact-form wow fadeInRight" method="POST" action="#">
           <div class="contact-form__full-name">
             <div class="contact-form__first-name">
               <input class="input" type="text" placeholder="First-Name" required="required">
@@ -405,60 +606,6 @@
         </form>
       </div> 
       </div>
-    </div>
-  </section>
-  <section class="progress">
-    <div class="container">
-      <header class="section-header">
-        <h2 class="section-header__title">Work in Progress</h2>
-        <p class="section-header__sub-title">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum
-          consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames
-          ac ante ipsum primis in faucibus.
-        </p>
-      </header>
-      <ul class="progress__list">
-        <li class="progress__item">
-          <figure>
-            <img class="progress__img" data-modal=".villa-modal" src="img/progress/progress1.jpg" alt="Картинка">
-            <figcaption class="progress__title">Vvoghts Villa</figcaption>
-          </figure>
-          <span class="progress__sub-title">Interior Design</span>
-          <p class="progress__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-        </li>
-        <li class="progress__item">
-          <figure>
-            <img class="progress__img" data-modal=".cafe-modal" src="img/progress/progress2.jpg" alt="Картинка">
-            <figcaption class="progress__title">Cafe D'Light</figcaption>
-          </figure>
-          <span class="progress__sub-title">Architecture</span>
-          <p class="progress__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-        </li>
-        <li class="progress__item">
-          <figure>
-            <img class="progress__img" data-modal=".furniture-modal" src="img/progress/progress3.jpg" alt="Картинка">
-            <figcaption class="progress__title">Furniture</figcaption>
-          </figure>
-          <span class="progress__sub-title">Product Design</span>
-          <p class="progress__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-        </li>
-        <li class="progress__item">
-          <figure>
-            <img class="progress__img" data-modal=".features-modal" src="img/progress/progress4.jpg" alt="Картинка">
-            <figcaption class="progress__title">Features</figcaption>
-          </figure>
-          <span class="progress__sub-title">Light Design</span>
-          <p class="progress__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-        </li>
-      </ul>
     </div>
   </section>
   <div class="villa-modal none">
@@ -497,7 +644,7 @@
         </p>
       </header>
       <ul class="price__table-list">
-        <li class="price__table-item">
+        <li class="price__table-item wow fadeInUp">
           <div class="price__table-tariff">
             <div class="price__table-number">01</div>
             <strong class="price__table-name">Trial </strong>
@@ -513,7 +660,7 @@
           </ul>
           <a href="" class="button button__sign-up">sign-up</a>
         </li>
-        <li class="price__table-item">
+        <li class="price__table-item wow fadeInDown">
           <div class="price__table-tariff">
             <div class="price__table-number">02</div>
             <strong class="price__table-name">Start</strong>
@@ -529,7 +676,7 @@
           </ul>
           <a href="" class="button button__sign-up">sign-up</a>
         </li>
-        <li class="price__table-item price__table-item-modify">
+        <li class="price__table-item price__table-item-modify wow fadeInUp">
           <div class="price__table-tariff">
             <div class="price__table-number price__table-number-modify">03</div>
             <strong class="price__table-name">Business</strong>
@@ -545,7 +692,7 @@
           </ul>
           <a href="" class="button button__sign-up button__sign-up-modify">sign-up</a>
         </li>
-        <li class="price__table-item">
+        <li class="price__table-item wow fadeInDown">
           <div class="price__table-tariff">
             <div class="price__table-number">04</div>
             <strong class="price__table-name">De Luxe</strong>
@@ -564,153 +711,9 @@
       </ul>
     </div>
   </section>
-  <section class="sustomers-words">
-    <div class="container">
-      <header class="section-header">
-        <h2 class="section-header__title">Customer's Words</h2>
-        <p class="section-header__sub-title">What our Customers are telling about us</p>
-      </header>
-      <ul class="sustomers-words__list">
-        <li class="sustomers-words__card">
-          <div class="sustomers-words__user">
-            <figure class="sustomers-words__picture">
-              <img src="img/Customer's Words/face1.jpg" alt="">
-              <figcaption class="sustomers-words__authors-name">Julia Kann</figcaption>
-              <div class="social">
-                <a class="social__icons social__icons-facebook" href="javascript:void(0);"></a>
-                <a class="social__icons social__icons-twitter" href="javascript:void(0);"></a>
-                <a class="social__icons social__icons-instagram" href="javascript:void(0);"></a>
-              </div>
-            </figure>
-            <div class="sustomers-words__dest">
-              <strong class="sustomers-words__feedback">"Exellent..."</strong>
-              <blockquote>
-                I first used Rev.com when our biggest client needed individual depth interview transcripts
-                faster than we have ever delivered them before. And after submitting
-                my first batch of interviews for transcription, I found Rev.com's work
-                highly accurate, and so fast, it was dizzying. I submitted 16 hour
-                long files for transcription, and they were all back to me within 24
-                hours.
-              </blockquote>
-            </div>
-          </div>
-        </li>
-        <li class="sustomers-words__card">
-          <div class="sustomers-words__user">
-            <figure class="sustomers-words__picture">
-              <img src="img/Customer's Words/face2.jpg" alt="">
-              <figcaption class="sustomers-words__authors-name">Adrianne Weil</figcaption>
-              <div class="social">
-                <a class="social__icons social__icons-facebook" href="javascript:void(0);"></a>
-                <a class="social__icons social__icons-twitter" href="javascript:void(0);"></a>
-                <a class="social__icons social__icons-instagram" href="javascript:void(0);"></a>
-              </div>
-            </figure>
-            <div class="sustomers-words__dest">
-              <strong class="sustomers-words__feedback">"100% Satisfied..."</strong>
-              <blockquote>
-                I first used Rev.com when our biggest client needed individual depth interview transcripts
-                faster than we have ever delivered them before. And after submitting
-                my first batch of interviews for transcription, I found Rev.com's work
-                highly accurate, and so fast, it was dizzying. I submitted 16 hour
-                long files for transcription, and they were all back to me within 24
-                hours.
-              </blockquote>
-            </div>
-          </div>
-        </li>
-        <li class="sustomers-words__card">
-          <div class="sustomers-words__user">
-            <figure class="sustomers-words__picture">
-              <img src="img/Customer's Words/face3.jpg" alt="">
-              <figcaption class="sustomers-words__authors-name">Alison Claire</figcaption>
-              <div class="social">
-                <a class="social__icons social__icons-facebook" href="javascript:void(0);"></a>
-                <a class="social__icons social__icons-twitter" href="javascript:void(0);"></a>
-                <a class="social__icons social__icons-instagram" href="javascript:void(0);"></a>
-              </div>
-            </figure>
-            <div class="sustomers-words__dest">
-              <strong class="sustomers-words__feedback">"Perfects..."</strong>
-              <blockquote>
-                I first used Rev.com when our biggest client needed individual depth interview transcripts
-                faster than we have ever delivered them before. And after submitting
-                my first batch of interviews for transcription, I found Rev.com's work
-                highly accurate, and so fast, it was dizzying. I submitted 16 hour
-                long files for transcription, and they were all back to me within 24
-                hours.
-              </blockquote>
-            </div>
-          </div>
-        </li>
-        <li class="sustomers-words__card">
-          <div class="sustomers-words__user">
-            <figure class="sustomers-words__picture">
-              <img src="img/Customer's Words/face4.jpg" alt="">
-              <figcaption class="sustomers-words__authors-name">Rachel Deborah</figcaption>
-              <div class="social">
-                <a class="social__icons social__icons-facebook" href="javascript:void(0);"></a>
-                <a class="social__icons social__icons-twitter" href="javascript:void(0);"></a>
-                <a class="social__icons social__icons-instagram" href="javascript:void(0);"></a>
-              </div>
-            </figure>
-            <div class="sustomers-words__dest">
-              <strong class="sustomers-words__feedback">"Good..."</strong>
-              <blockquote>
-                I first used Rev.com when our biggest client needed individual depth interview transcripts
-                faster than we have ever delivered them before. And after submitting
-                my first batch of interviews for transcription, I found Rev.com's work
-                highly accurate, and so fast, it was dizzying. I submitted 16 hour
-                long files for transcription, and they were all back to me within 24
-                hours.
-              </blockquote>
-            </div>
-          </div>
-        </li>
-        <li class="sustomers-words__card">
-          <div class="sustomers-words__user">
-            <figure class="sustomers-words__picture">
-              <img src="img/Customer's Words/face5.jpg" alt="">
-              <figcaption class="sustomers-words__authors-name">Sarah Joanne</figcaption>
-              <div class="social">
-                <a class="social__icons social__icons-facebook" href="javascript:void(0);"></a>
-                <a class="social__icons social__icons-twitter" href="javascript:void(0);"></a>
-                <a class="social__icons social__icons-instagram" href="javascript:void(0);"></a>
-              </div>
-            </figure>
-            <div class="sustomers-words__dest">
-              <strong class="sustomers-words__feedback">"I like it..."</strong>
-              <blockquote>
-                I first used Rev.com when our biggest client needed individual depth interview transcripts
-                faster than we have ever delivered them before. And after submitting
-                my first batch of interviews for transcription, I found Rev.com's work
-                highly accurate, and so fast, it was dizzying. I submitted 16 hour
-                long files for transcription, and they were all back to me within 24
-                hours.
-              </blockquote>
-            </div>
-          </div>
-        </li>
-      </ul>
-      <div class="sustomers__slider-dots">
-        <span class="slider-dot active" data-carousel-circle="0"></span>
-        <span class="slider-dot" data-carousel-circle="1"></span>
-        <span class="slider-dot" data-carousel-circle="2"></span>
-        <span class="slider-dot" data-carousel-circle="3"></span>
-        <span class="slider-dot" data-carousel-circle="4"></span>
-      </div>
-      <div class="sustomers-words__controll-panel">
-        <button id="slide-prev" class="button">Prev</button>
-        <button id="slide-next" class="button">Next</button>
-      </div>
-    </div>
-  </section>
   <!--
-    1. Добавить ссылки
     2. добавить анимацию появление 
-    4. nav responsive
-    3, акардион в меню
-    5. уменшить стрелки на экране велком
+
 
    -->
   </div>
@@ -719,7 +722,7 @@
   
     <section class="footer__back-top">
       <div class="container">
-        <a class="ic on icon__arrow-top" href="#">&#11014;</a>
+        <a class="icon__arrow-top wow fadeInLeft" href="#header">&#11014;</a>
       </div>
     </section>
   
