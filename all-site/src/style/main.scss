@@ -1,0 +1,29 @@
+@import 'reset';
+@import 'fonts';
+@import 'variable';
+@import 'libs';
+@import 'grid';
+@import 'mixins';
+@import 'blocks/placeholder';
+
+@import 'base';
+@import 'blocks/others-style/button';
+@import 'blocks/others-style/section-header';
+@import 'blocks/others-style/section';
+@import 'blocks/others-style/title';
+@import 'blocks/others-style/icon';
+
+// Block
+@import 'blocks/header';
+@import 'blocks/features';
+@import 'blocks/about';
+@import 'blocks/services';
+@import 'blocks/progress-modal';
+@import 'blocks/services-modal';
+@import 'blocks/progress';
+@import 'blocks/prices';
+@import "blocks/sustomer's-words";
+@import "blocks/contact";
+
+@import 'blocks/footer';
+@import 'media'; //Всегда в конце

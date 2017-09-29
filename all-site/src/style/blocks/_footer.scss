@@ -1,0 +1,87 @@
+.footer {
+
+  &__back-top {
+    text-align: center;
+    background-color: #455A64;
+    cursor: pointer;
+    transition: all .5s ease-out 0.06s;
+
+    &:hover {
+      background-color: $orange;
+    }
+
+  }
+  
+  &__copyright {
+  background-color: #263238;
+  padding: 25px 0;
+  }
+
+  &__menu {
+    padding: 40px 0;
+    background-color: $limed-spruce;
+    color: #bdbdbd;
+
+    a {
+      color: #bdbdbd;
+    }
+  }
+
+}
+
+.made-by {
+  color: #eee;
+}
+
+.icon__arrow-top {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: block;
+}
+
+.footer__menu-inner {
+  @include flex();
+}
+
+.footer__menu-desc {
+  @include line();
+  @include col(6);
+  @include col-lg(12);
+  font-size: .9rem;
+}
+
+.footer__menu-categories {
+  @include line();
+  @include col(2);
+  @include col-lg(12);
+
+}
+
+.footer__menu-themes {
+  @include line();
+  @include col(2);
+  @include col-lg(12);
+}
+
+.footer__menu-follow {
+  @include line();
+  @include col(2);
+  @include col-lg(12);
+}
+
+
+.footer__menu-title {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer__menu-link {
+  font-size: .9rem;
+  font-weight: 500;
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,40 @@
+.features {
+  overflow: hidden;
+  color: #fff;
+  &__list {
+    @include flex();
+  }
+  &__item {
+    @include line(0px);
+    @include col(3, 0px);
+    @include col-xl(6, 0px);
+    @include col-md(12, 0px);
+    padding: 60px;
+  }
+  &__text-title {
+    font-weight: 400;
+    font-size: 1.64rem;
+    margin-bottom: 15px;
+  }
+  &__text {
+    font-size: .95rem;
+  }
+}
+
+.bg-pink { background-color: $pink; }
+.bg-purple { background-color: $purple; }
+.bg-orange { background-color: $orange; }
+.bg-yellow { background-color: $yellow; }
+
+.icon-settings::before,
+.icon-star::before,
+.icon-eye::before,
+.icon-marker::before {
+  font-size: 1.4rem;
+  display: block;
+  font-family: FontAwesome;
+}
+.icon-star::before { content: '\f005'; }
+.icon-settings::before { content: '\f013'; }
+.icon-eye::before { content: '\f06e'; }
+.icon-marker::before { content: '\f041'; }

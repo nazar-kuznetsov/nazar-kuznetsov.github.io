@@ -1,0 +1,59 @@
+.price {
+  padding: 80px 0;
+  background-color: $limed-spruce;
+  &__table-list {
+    @include flex(10px);
+  }
+  &__table-item {
+    @include line(10px);
+    @include col(3,10px);
+    @include col-lg(6);
+    @include col-sm(12);
+    background-color: #F2F2F2;
+    padding: 20px;
+    text-align: center;
+    &-modify {
+      color: $orange;
+    }
+  }
+
+  .section-header {
+    color: #fff;
+  }
+  &__table-number {
+    font-size: 4rem;
+    line-height: 1.5;
+    font-weight: bold;
+    color: $limed-spruce;
+    &-modify {
+      color: $orange;
+    }
+  }
+  &__table-name {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  &__table-dest {
+    font-size: $font-size-small;
+  }
+  &__table-products {
+    margin: 35px 0;
+    font-size: $font-size-small;
+  }
+  &__table-product {
+    border-top: 1px solid #ccc;
+    line-height: 2.5;
+    &:last-child {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}
+
+.button__sign-up {
+  padding: 5px 25px; 
+  font-size: .9rem;
+  background-color: $limed-spruce;
+  &-modify {
+    background-color: $orange;
+  }
+}

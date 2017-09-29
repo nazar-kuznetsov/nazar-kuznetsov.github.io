@@ -1,0 +1,40 @@
+.about {
+  padding: 80px;
+  text-align: center;
+}
+.steps-implementation {
+  @include flex();
+  color: #222;
+  margin-bottom: 50px;
+  &__item {
+    @include col(4);
+    @include line();
+    @include col-lg(12);
+    padding: 0 10px;
+  }
+  &__title {
+    font-size: 2rem;
+  }
+  &__text {
+    font-size: 0.95rem;
+  }
+  &__order-btn {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 12px 15px;
+  }
+}
+
+
+.about .icon-desing::before,
+.about .icon-comment::before,
+.about .icon-feedback::before {
+  font-size: 3rem;
+  display: block;
+  font-family: FontAwesome;
+  color: $orange;
+}
+
+.icon-desing::before { content: '\f0ac'; }
+.icon-comment::before { content: '\f0e5'; }
+.icon-feedback::before { content: '\f140'; }

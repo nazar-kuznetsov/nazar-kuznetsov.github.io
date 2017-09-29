@@ -1,0 +1,61 @@
+html {
+  height: 100%;
+
+  font-size: 16px;
+}
+
+a {
+  outline: none;
+}
+
+// font-family: FontAwesome;
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  height: 100%;
+  line-height: 1.75;
+  font-size: 1.1rem;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  background: none;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+
+.wrapper {
+  flex-grow: 1;
+}
+
+.container {
+  @include conteiner();
+  overflow: hidden;
+  position: relative;
+}
+
+
+.container-fluid {
+  padding: $gutter;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 300;
+}

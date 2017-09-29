@@ -1,0 +1,102 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2050;
+  background-color: rgba(0, 0, 0, .9);
+  transition: opacity .3s 0s, visibility 0s .3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.none {
+  display: none;
+}
+
+.close-modal {
+  position: absolute;
+  right: 15px;
+  display: block;
+  top: 25px;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 0;
+  cursor: pointer;
+  color: $turquoise;
+  transition: color .3s;
+  &:hover {
+    color: $orange;
+  }
+  &::after {
+    content: '\f00d';
+    font-family: FontAwesome;
+  }
+}
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 1170px;
+  width: 100%;
+  padding: 10px 35px 10px 10px;
+  z-index: 2100;
+  max-height: 100%;
+  min-height: 350px;
+  @include md(top, 0);
+  @include md(overflow-Y, scroll);
+  @include md(border-radius, 0px);
+
+}
+
+.show {
+  visibility: visible;
+  transition: opacity .2s linear;
+  opacity: 1;
+}
+
+.modal-inner {
+  @include flex();
+}
+
+.modal-inner__picture {
+  @include line();
+  @include col(6);
+  @include col-md(12);
+  img {
+    display: block;
+    margin-bottom: 30px;
+    border-radius: 3px;
+  }
+  text-align: center;
+}
+
+.modal-inner__description {
+  @include line();
+  @include col(6);
+  @include col-md(12);
+}
+
+.modal-inner__text {
+  margin-bottom: 25px;
+}
+
+.modal-inner__header {
+  text-align: center;
+  margin-bottom: 25px;
+
+}
+
+.modal-inner__title {
+  font-size: 2rem;
+}
+
+.modal-inner__sub-title {
+  text-decoration: underline;
+}
