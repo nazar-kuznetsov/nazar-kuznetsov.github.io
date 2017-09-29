@@ -308,7 +308,7 @@ h6 {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#1D729E',GradientType=1 );
   position: relative;
   height: 100vh;
-  min-height: 550px;
+  min-height: 450px;
 }
 
 .header .container {
@@ -369,8 +369,11 @@ h6 {
 }
 
 .header__menu-item ul {
-  opacity: 0;
   position: absolute;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height .5s;
+  transition: max-height .5s;
   z-index: 10000;
   background-color: #fff;
   top: 60px;
