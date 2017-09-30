@@ -49,8 +49,8 @@ var config = {
     server: {
         baseDir: "./build"
     },
-    tunnel: true,
-    //host: 'localhost',
+    //tunnel: true,
+    host: 'localhost',
     port: 9000,
     logPrefix: "Kuznetsov"
 };
@@ -90,13 +90,13 @@ gulp.task('js:build', function () {
 
 gulp.task('style:build', function () {
     gulp.src(path.src.style) //Выберем наш main.scss
-        //.pipe(sourcemaps.init()) //То же самое что и с js
+        .pipe(sourcemaps.init()) //То же самое что и с js
         .pipe(sass()) //Скомпилируем
         .on('error', notify.onError ())
         .pipe(prefixer()) //Добавим вендорные префиксы
         .pipe(gcmq()) // media
         .pipe(cssmin()) //Сожмем
-        // .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css)) //И в build
         .pipe(reload({stream: true}));
 });
