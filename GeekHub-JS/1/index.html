@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Кузнецов Назар</title>
   <meta charset="UTF-8">
@@ -7,110 +8,52 @@
   <meta name="description" content="Geekhub Javascript">
   <meta name="keywords" content="Geekhub Javascript">
   <meta name="author" content="Nazar Kuznetsov">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <link rel="shortcut icon" href="img/favicon/favicon.ico.png" type="image/x-icon">
-  <link rel="stylesheet" href="libs/preloader/preloader.css">
+  <!-- <link rel="stylesheet" href="libs/preloader/preloader.css"> -->
 </head>
+
 <body>
-   <div id="preloader" class="preloader-background">
-    <div class="preloader">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
+  <!-- //= template/preloader.html -->
   <div class="wrapper">
-  <header class="header">
-    <div class="container">
-  
-      <div class="users">
-        <div class="users__card">
-          <div class="users__photo">
-            <img src="img/1.jpg" alt="men">
-          </div>
-          <div class="users__description">
-            <p class="users__name">Andy Pulse</p>
-            <p class="users__skills">
-              Thorough understanding of JavaScript (ES6) and component based architecture using
-              libraries like Vue.js and React Solid mastery of HTML, CSS, and CSS preprocessors
-              like Sass A background in responsive and mobile-first design.
-            </p>
-          </div>
-        </div>
-        <div class="users__card">
-          <div class="users__photo">
-            <img src="img/2.jpg" alt="weomen">
-          </div>
-          <div class="users__description">
-            <p class="users__name">Anna Gauls</p>
-            <p class="users__skills">
-              Thorough understanding of JavaScript (ES6) and component based architecture using
-              libraries like Vue.js and React Solid mastery of HTML, CSS, and CSS preprocessors
-              like Sass A background in responsive and mobile-first design.
-            </p>
-          </div>
-        </div>
-      </div>
-  
-    </div>
-  </header>
-  <main class="main">
-    <div class="container">
-      <div class="flex">
-  
-      <aside class="aside aside-left">
-        <ul class="aside__menu-list">
-          <li class="aside__menu-item">
-            <a href="" class="aside__menu-link">Меню 1</a>
+
+    <section class="users">
+      <div class="container">
+        <ul class="users__cards-list">
+          <li class="users__cards-item">
+            <div class="users__cards-photo"></div>
+            <div class="users__cards-descriptions">
+              <p class="users__cards-info"></p>
+              <p class="users__cards-info"></p>
+            </div>
           </li>
-          <li class="aside__menu-item">
-            <a href="" class="aside__menu-link">Меню 2</a>
-          </li>
-          <li class="aside__menu-item">
-            <a href="" class="aside__menu-link">Меню 3</a>
-          </li>
-          <li class="aside__menu-item">
-            <a href="" class="aside__menu-link">Меню 4</a>
-          </li>
-          <li class="aside__menu-item">
-            <a href="" class="aside__menu-link">Меню 5</a>
-          </li>
-          <li class="aside__menu-item">
-            <a href="" class="aside__menu-link">Меню 6</a>
-          </li>
-          <li class="aside__menu-item">
-            <a href="" class="aside__menu-link">Меню 7</a>
+          <li class="users__cards-item">
+            <div class="users__cards-photo"></div>
+            <div class="users__cards-descriptions">
+              <p class="users__cards-info"></p>
+              <p class="users__cards-info"></p>
+            </div>
           </li>
         </ul>
-      </aside>
-      <section class="content">
-        <div class="container">
-          <header class="content__header">
-            <h1 class="content__title">Hello World</h1>
-            <p class="content__sub-title">This Is JavaScript</p>
-          </header>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure veritatis harum quos, perspiciatis id assumenda! Voluptatum veritatis tempore ad nobis porro magnam saepe, odit vitae illo incidunt rerum perspiciatis! Iure. ssumenda! Voluptatum veritatis tempore ad nobis porro magnam saepe, odit vitae illo incidunt rerum perspi
-          </p>
-            
+      </div>
+    </section>
+    <main class="main">
+      <div class="container">
+        <div class="main__flex">
+          <aside class="aside">300px</aside>
+          <section class="content">100%</section>
+          <aside class="aside">300px</aside>
+          <footer class="footer">100%</footer>
         </div>
-      </section>
-      <aside class="aside ad">
-        <p class="ad__text">Реклама</p>
-      </aside>
-    </div>
-    </div>
-  </main>
+      </div>
+    </main>
 
   </div>
-  <footer class="footer">
-    <div class="container">
-      <p>Made by Nazar Kuznetsov</p>
-    </div>
-  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <script src="js/main.js"></script>
 </body>
+
 </html>
