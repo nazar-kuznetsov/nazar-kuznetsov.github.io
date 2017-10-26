@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Кузнецов Назар</title>
+  <meta charset="UTF-8">
+  <!-- Description of the site -->
+  <meta name="description" content="Geekhub Javascript">
+  <meta name="keywords" content="Geekhub Javascript">
+  <meta name="author" content="Nazar Kuznetsov">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon/js.png" type="image/x-icon">
+  <!-- <link rel="stylesheet" href="libs/preloader/preloader.css"> -->
+</head>
+
+<body>
+  <!-- //= template/preloader.html -->
+  <div class="wrapper">
+    <div class="about-author">
+      <div class="container">
+        <h1>GeekHub JavaScript 2017</h1>
+        <p>Функции, инпуты, события</p>
+      </div>
+    </div>
+    <div class="container">
+      <header>
+        <h3>
+          Сделайте так чтобы как только в инпут впишут слово "JavaScript", то сразу чекбокс
+          справа перешёл в зачеканное состояние
+        </h3>
+        <hr>
+        <input placeholder="Введите Javascript" id="input-text" class="input" type="text">
+        <input id="input-checkbox" type="checkbox" />
+        <p class="hidden-text">Ура вы активировали checkbox</p>
+      </header>
+      <h3>
+        Сделать перед сабмитом формы проверку всех инпутов и если хоть один не прошёл её,
+        то выводить сообщение с помощью функции alert() и откланять сабмит формы
+        через метод события preventDefault(). В первом поле должны быть только числа,
+        во втором только буквы a, b, c и d, чекбокс должен быть зачекан, один из
+        инпутов в четвёртой группе должен быть зачекан.
+      </h3>
+      <hr>
+      <form action="#" id="form-test" class="form">
+        <label class="label">
+          <span class="input-title">Введите число</span>
+          <input id="only-numbers" class="input-form input" type="text" name="numbers" placeholder="Число...">
+          <p class="massage-number massage"></p>
+        </label>
+        <label class="label">
+          <span class="input-title">Введите буквы</span>
+          <input id="only-letters" class="input-form input" type="text" name="letters" placeholder="A, B, C, D">
+          <p class="massage-letters massage"></p>
+        </label>
+        <label>
+          <input id="agreement" type="checkbox" name="agreement" /> Вы согласны?
+          <span class="massage hidden-text">Вы должны дать согласие!</span>
+        </label>
+        <br>
+        <p>
+          <label>
+            <input type="radio" name="type" value="first" /> JS
+          </label>
+          <br>
+          <label>
+            <input type="radio" name="type" value="second" /> PHP
+          </label>
+          <br>
+          <label>
+            <input type="radio" name="type" value="last" /> C#
+          </label>
+        </p>
+        <p class="massage hidden-text">Выберите язык програмирование</p>
+        <p>
+          <input type="submit" class="form__button"></input>
+        </p>
+      </form>
+    </div>
+  </div>
+  <footer class="footer">
+  
+  </footer>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
