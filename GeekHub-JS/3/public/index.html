@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="style/main.css">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico.png" type="image/x-icon">
+  <title>Кузнецов Назар</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <div class="container">
+      <h1>JavaScript 2017</h1>
+      <h2>NodeJS, Express, HTTP, AJAX</h2>
+      <h4>Валидация форм на стороне сервера</h4>
+      <div class="form-seccess">
+        <h2>Success:) you form send!</h2>
+        <img src="img/ok.png" alt="ok">
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <h2>create-user</h2>
+      <form id="create-user" action="/create-user" class="form" method="POST">
+        <label class="input-box">
+          <span>Только Числа</span>
+          <input type="text" name="numbers" placeholder="только числа">
+        </label>
+        <p class="massage-form"></p>
+        <hr>
+        <label class="input-box">
+          <span>Только буквы A, B, C, D</span>
+          <input type="text" name="letters" placeholder="A, B, C, D">
+        </label>
+        <p class="massage-form"></p>
+        <hr>
+        <label>
+          <input type="checkbox" name="agreement" value="active">
+          <span class="acquainted">чекбокс должен быть зачекан</span>
+        </label>
+        <p class="massage-form"></p>
+        <hr>
+        <p class="select-lang__text">Выберите язык програмирование</p>
+        <label>
+          <input type="radio" name="type" value="JavaScript"> JavaScript
+          <br>
+        </label>
+        <label>
+          <input type="radio" name="type" value="C#"> C#
+          <br>
+        </label>
+        <label>
+          <input class="last-radio" type="radio" name="type" value="Python"> Python
+          <br>
+        </label>
+        <p id="dsa" class="massage-form"></p>
+        <hr>
+        <p>
+          <button class="button-user">Submit</button>
+        </p>
+      </form>
+
+      <!-- <h2>create-friend</h2>
+      <form action="/create-friend" method="POST">
+        <input type="text" name="name" placeholder="create-friend">
+        <button>submit</button>
+      </form> -->
+    </div>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/create-user.js"></script>
+</body>
+
+</html>
