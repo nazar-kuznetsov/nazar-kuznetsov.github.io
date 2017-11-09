@@ -44,14 +44,13 @@ let items = document.querySelectorAll('.user__item');
 document.querySelector('#search-user').addEventListener('input', serachUser);
 
 function serachUser() {
-  let val = this.value;
+  let val = this.value.toLowerCase();
   let myReg = new RegExp('^' + escapeRegExp(val), 'i');
 
   for (let i = 0; i < items.length; i++) {
     if (myReg.test(items[i].textContent)) {
       items[i].classList.remove('hidden');
-      console.log(val);
-      items[i].innerHTML = items[i].textContent.replace(val, `<span class='highlight'>${val}</span>`);
+      items[i].innerHTML = items[i].textContent.toLowerCase().replace(val, `<span class='highlight'>${val}</span>`);
     } else {
       items[i].classList.add('hidden');
     }
