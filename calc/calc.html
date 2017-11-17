@@ -80,7 +80,7 @@
 <body>
 
   <div class="container">
-    <input id="all_weight" type="text" placeholder="Общий Вес"> <br>
+    <input id="all_weight" type="text" placeholder="Если старой 1800-(1725)"> <br>
     <input id="pcs" type="text" placeholder="шт"> <br>
     <button id="start">Старт</button> <br>
     <h1></h1>
@@ -103,30 +103,41 @@
     var list = document.querySelector('.list');
     list.innerHTML = '';
     var num_weight = parseInt(all_weight.value);
+
     var num_pcs = parseInt(pcs.value);
     var calc = Math.floor(num_weight / num_pcs);
     var h1 = document.querySelector('h1');
-    h1.innerText = "По " + calc + "грамм ";
-    var h2 = document.createElement("h2");
 
 
-    console.log(calc);
-    for ( var i = 1; i <= num_pcs; i++ ) {
+    if (/-/g.test(all_weight.value)) {
+      var newSumma = all_weight.value;
+      var sums = newSumma.match(/\((.*)\)/);
+      let summaOneProduct = parseInt(( num_weight - sums[1] ) / num_pcs);
+
+      for (var j = 0; j < num_pcs; j++) {
+        var span = document.createElement('span');
+        span.classList.add('span');
+        span.textContent = num_weight -= summaOneProduct;
+        list.appendChild(span);
+      }
+      h1.innerText = "По " + summaOneProduct + "грамм ";
+    } else {
+      for ( var i = 1; i <= num_pcs; i++ ) {
       var span = document.createElement('span');
       span.classList.add('span');
       span.textContent = num_weight -= calc;
       list.appendChild(span);
+      }
+      h1.innerText = "По " + calc + "грамм ";
     }
 
-
-    h2.innerText = "Ура сегодня будут блинчики:)";
-    list.appendChild(h2);
-
-
-   
+    //var h2 = document.createElement("h2");
 
 
 
+
+    //h2.innerText = "Ура сегодня будут блинчики:)";
+    //list.appendChild(h2);
 
 
   });
