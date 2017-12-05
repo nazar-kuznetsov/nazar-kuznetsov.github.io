@@ -15,7 +15,7 @@
 <body>
   <!-- //= template/preloader.html  -->
   <div class="wrapper">
-    
+
     <section class="goods">
     
       <div id="goods__list" class="goods__list">
@@ -56,9 +56,8 @@
           <div class="goods__desc"></div>
         </div>
         <div class="flex-box">
-    
-          <div class="backet">
-            <div class="backet-icon" id="backet"></div>
+          <div class="basket">
+            <div class="basket-icon" id="basket"></div>
           </div>
         </div>
       </div>
@@ -74,24 +73,50 @@
               <th>Удалить</th>
             </tr>
           </thead>
-          <tbody id="out">
+          <tbody id="product-out">
     
           </tbody>
         </table>
         <div class="reset-box">
-          <div class="all-reset">Очистить корзину</div>
+          <div id="delete-all-goods" class="all-reset">Очистить корзину</div>
         </div>
         <div id="total" class="total"></div>
-      </div>
-    </section>
-
-    <main class="main">
-      <div class="container">
-      </div>
-    </main>
-    <footer class="footer">
     
-    </footer>
+        <div id="send-order" class="send-order">
+          <button id="send-order__button" class="send-order__button button">Оформить заказ</button>
+        </div>
+      </div>
+    
+    </section>
+    
+    
+    <div class="form-order-overlay">
+      <div id="form-order" class="">
+        <div class="form">
+          <div class="form-order-close">&#10006;</div>
+          <form id="send-order-form" action="" method="post">
+            <p id="form-order-total" class="total total-form"></p>
+            <h2>Заполните форму</h2>
+            <label class="label-order-form">
+              <p>Имя</p>
+              <input id="user-name" type="text" name="user-name" placeholder="Имя">
+            </label>
+            <label class="label-order-form">
+              <p>Номер телефона</p>
+              <input id="user-phone" type="tel" name="user-phone" placeholder="Номер Телефона">
+            </label>
+            <label class="label-order-form">
+              <p>Email</p>
+              <input id="user-email" type="email" name="user-email" placeholder="Email...">
+            </label>
+            <p class="input-submit-box">
+              <input id="submit-form" type="submit" value="ПОДТВЕРДИТЬ ЗАКАЗ" class="button">
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+    
 
   </div>
   <link rel="stylesheet" href="css/main.css">
