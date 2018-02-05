@@ -154,6 +154,18 @@ html {
   display: flex;
 }
 
+.slider__list li {
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+.slider__list li.active {
+  -webkit-transition-delay: .3s;
+  transition-delay: .3s;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 h1 {
   text-align: center;
   margin: 25px 0;
