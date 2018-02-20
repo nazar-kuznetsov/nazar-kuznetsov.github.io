@@ -1,0 +1,108 @@
+/*-------------------------------------Горизонтальный слайдер-----------------------------------------*/
+
+.vanilla-wrapper {
+  overflow: hidden;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.animate {
+  -webkit-transition: max-height 300ms ease, -webkit-transform 300ms ease;
+  transition: max-height 300ms ease, -webkit-transform 300ms ease;
+  transition: transform 300ms ease, max-height 300ms ease;
+  transition: transform 300ms ease, max-height 300ms ease, -webkit-transform 300ms ease;
+}
+
+.vanilla-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  max-height: 0;
+  margin-left: -5px;
+  margin-right: -5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.vanilla-item {
+  position: relative;
+  min-width: 100%;
+  padding: 0 5px;
+}
+
+.vanilla-item img {
+  max-width: 100%;
+  display: block;
+}
+
+/*-------------------------------------Вертикальный слайдер-------------------------------------------*/
+
+.vanilla-wrapper__vertical {
+  height: 420px;
+  max-width: 700px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.animate-Y {
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.vanilla-slider__vertical {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.vanilla-item__vertical {
+  position: relative;
+  height: 420px;
+}
+
+.vanilla-item__vertical img {
+  max-width: 100%;
+  display: block;
+}
+
+/*-------------------------------------Fade слайдер---------------------------------------------------*/
+
+.vanilla-wrapper__fade {
+  overflow: hidden;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.vanilla-slider__fade {
+  height: 437px;
+  position: relative;
+}
+
+.vanilla-item__fade {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  opacity: 0;
+}
+
+.vanilla-item__fade.active {
+  z-index: 1;
+  opacity: 1;
+}
+
+.vanilla-item__fade img {
+  display: block;
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------------------------------------*/
