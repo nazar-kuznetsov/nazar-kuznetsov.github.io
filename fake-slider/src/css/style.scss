@@ -1,0 +1,60 @@
+@import 'reset';
+@import 'variable';
+@import 'slider';
+@import 'grid';
+html {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+select {
+	margin-bottom: 25px;
+}
+
+.img-cart {
+	display: none;
+	transition: all .5s ease;
+	width: 300px;
+	height: 300px;
+	&.active {
+		display: block;
+	}
+}
+
+.section {
+	text-align: center;
+}
+
+.total span {
+	font-size: 2rem;
+	font-weight: bold;
+	padding-right: 5px;
+}
+
+.slider-element {
+	p {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		font-size: 2rem;
+		background-color: rgba(0, 0, 0, .6);
+		padding: 30px;
+		width: 100%;
+		color: #fff;
+	}
+}
+
+.container {
+	max-width: 1200px;
+	@include container();
+}
+
+h2 {
+	font-size: 2rem;
+	font-style: italic;
+	line-height: 1.6;
+	font-weight: normal;
+}
+
+@import 'media';

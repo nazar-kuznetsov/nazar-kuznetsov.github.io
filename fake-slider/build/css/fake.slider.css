@@ -1,0 +1,115 @@
+/*-------------------------------------Горизонтальный слайдер-----------------------------------------*/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.fake-wrapper {
+  overflow: hidden;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.animate {
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.fake-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -5px;
+  margin-right: -5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.fake-item {
+  position: relative;
+  min-width: 100%;
+  padding: 0 5px;
+
+}
+
+.fake-item img {
+  max-width: 100%;
+  display: block;
+}
+
+/*-------------------------------------Вертикальный слайдер-------------------------------------------*/
+
+.fake-wrapper__vertical {
+  height: 450px;
+  max-width: 700px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.fake-wrapper__vertical .animate {
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+}
+
+.fake-slider__vertical {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.fake-item__vertical {
+  position: relative;
+  height: 450px;
+}
+
+
+.fake-item__vertical img {
+  max-width: 100%;
+  display: block;
+}
+
+/*-------------------------------------Fade слайдер---------------------------------------------------*/
+
+.fake-wrapper__fade {
+  overflow: hidden;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.fake-slider__fade {
+  height: 437px;
+  position: relative;
+}
+
+.fake-item__fade {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  opacity: 0;
+}
+
+.fake-item__fade.active {
+  z-index: 1;
+  opacity: 1;
+}
+
+.fake-item__fade img {
+  display: block;
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------------------------------------*/
