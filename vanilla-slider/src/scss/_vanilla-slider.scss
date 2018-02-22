@@ -1,11 +1,10 @@
 @charset "UTF-8";
 
-/*-------------------------------------Горизонтальный слайдер-----------------------------------------*/
-
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
+/*-------------------------------------Горизонтальный слайдер-----------------------------------------*/
 
 .slider-container-X {
   overflow: hidden;
@@ -23,18 +22,19 @@
   margin-left: -5px;
   margin-right: -5px;
   user-select: none;
-  list-style: none;
 }
 
 .slider-item-X {
   position: relative;
   min-width: 100%;
-  padding: 0 5px; /* оступ между слайдами */
-}
-
-.slider-item-X img {
-  max-width: 100%;
-  display: block;
+  padding: 0 5px; // оступ между слайдами
+  &.active {
+    // стили для активного єлемента
+  }
+  img {
+    max-width: 100%;
+    display: block;
+  }
 }
 
 /*-------------------------------------Вертикальный слайдер-------------------------------------------*/
@@ -51,17 +51,16 @@
 
 .slider-Y {
   user-select: none;
-  list-style: none;
 }
 
 .slider-item-Y {
   position: relative;
   height: 400px;
-}
-
-.slider-item-Y img {
-  max-width: 100%;
-  display: block;
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
 }
 
 /*-------------------------------------Fade слайдер---------------------------------------------------*/
@@ -69,7 +68,6 @@
   max-width: 560px;
   height: 350px;
   position: relative;
-  list-style: none;
 }
 
 .slider-item-F {
@@ -79,16 +77,18 @@
   
   transition: .3s ease;
   opacity: 0;
-}
+  &.active {
+    // стили для активного єлемента
+  }
+  &.active {
+    z-index: 1;
+    opacity: 1;
+  }
 
-.slider-item-F.active {
-  z-index: 1;
-  opacity: 1;
-}
-
-.slider-item-F img {
-  display: block;
-  max-width: 100%;
+  img {
+    display: block;
+    max-width: 100%;
+  }
 }
 
 /*--------------------------------------------------------------------------------------------*/
