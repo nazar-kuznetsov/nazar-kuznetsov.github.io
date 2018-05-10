@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Документ</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="./style/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container"> 
+    <div class="flex">
+      <!-- показывает название страны на экране -->
+      <div class="country" id="country"></div>
+      <!--  показывает ip на экране -->
+      <div class="ip" id="ip"></div>
+    </div>
+    <p>Текст снизу будет переведен с русского языка на язык вашей страны который определиться по IP</p>
+    
+    <!-- 
+      Сдесь пишем текст который должен переводиться на другие языки по 
+      умолчанию будет переводиться с русского изменить можно в атрибуте data-language 
+      например поставить data-language="uk" будет переводить с украниского, если en то с анлийского
+    -->
+    <div class="translate hide" id="js-massage" data-language="ru"> 
+      Тут может быть очень длиный текст который будет автоматический переводиться на язык страны, с какой вы зашли на этот сайт
+    
+    </div>
+
+
+
+  </div>
+
+  
+
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/jQuery-google-translate-api.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+<html>
