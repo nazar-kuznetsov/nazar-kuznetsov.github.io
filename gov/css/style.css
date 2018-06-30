@@ -4835,7 +4835,7 @@ video {
     -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
-    max-height:  100vh;
+    max-height:  calc(100vh - 122px);
     overflow-y: scroll;   
 
     .actual-news::-webkit-scrollbar-track {
@@ -4957,6 +4957,7 @@ video {
 
   .drop-menu__link {
     position: relative;
+    padding-right: 20px;
   }
 
   .drop-menu__title {
