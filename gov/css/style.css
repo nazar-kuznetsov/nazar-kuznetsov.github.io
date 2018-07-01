@@ -1,13 +1,20 @@
 @charset 'UTF-8';
 
 /*
-*************** file navigation ***************
-Header
-Footer
-Preloader
+**************************************************** FILE NAVIGATION **************************************************************
+1.HEADER
+2.SECTION-WELLCOME
+3.SECTION-CONTENT-TAB
+4.SECTION-NEWS
+5.SECTION-ADVANTAGES
+6.SECTION-FAQ
+7.SECTION-MEDIA
+8.SECTION-GOV
+9.FOOTER
+10.MEDIA-RULE
 */
 
-/*==================================== Style Reset =================================================*/
+/*=============================================LIBS====================================================*/
 
 /*================ slick-slider ==========================*/
 
@@ -3332,6 +3339,84 @@ Preloader
 
 /*=============== botstrap ================================*/
 
+/*============================================Preloader===============================================*/
+
+.preloader {
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: #00529e;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 70px;
+
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.spinner > div {
+  display: inline-block;
+
+  width: 18px;
+  height: 18px;
+
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+          animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  background-color: #fff;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -.32s;
+          animation-delay: -.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -.16s;
+          animation-delay: -.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/*==================================== Style Reset =================================================*/
+
 html,
 body,
 div,
@@ -3908,85 +3993,7 @@ h2 {
   cursor: inherit;
 }
 
-/*============================================Preloader===============================================*/
-
-.preloader {
-  position: fixed;
-  z-index: 11;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  background-color: #00529e;
-}
-
-.spinner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  width: 70px;
-
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.spinner > div {
-  display: inline-block;
-
-  width: 18px;
-  height: 18px;
-
-  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-          animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-
-  -webkit-border-radius: 100%;
-          border-radius: 100%;
-  background-color: #fff;
-}
-
-.spinner .bounce1 {
-  -webkit-animation-delay: -.32s;
-          animation-delay: -.32s;
-}
-
-.spinner .bounce2 {
-  -webkit-animation-delay: -.16s;
-          animation-delay: -.16s;
-}
-
-@-webkit-keyframes sk-bouncedelay {
-  0%,
-  80%,
-  100% {
-    -webkit-transform: scale(0);
-  }
-
-  40% {
-    -webkit-transform: scale(1);
-  }
-}
-
-@keyframes sk-bouncedelay {
-  0%,
-  80%,
-  100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-
-  40% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-/*=============================================libs====================================================*/
-
-/*============================================Header==================================================*/
+/*============================================1.HEADER==================================================*/
 
 .header {
   position: relative;
@@ -4351,7 +4358,7 @@ h2 {
   margin: 0 50px;
 }
 
-/*============================================Wellcome==================================================*/
+/*============================================2.SECTION-WELLCOME==================================================*/
 
 .wellcome {
   padding: 15px 0 25px;
@@ -4404,7 +4411,7 @@ h2 {
   margin: auto;
 }
 
-/*============================================Section-Content-Tab==================================================*/
+/*============================================3.SECTION-CONTENT-TAB==================================================*/
 
 .content-tab {
   background-color: #005bbb;
@@ -4455,7 +4462,7 @@ h2 {
   background-color: #00529e;
 }
 
-/*============================================Section-NEWS==================================================*/
+/*============================================4.SECTION-NEWS==================================================*/
 
 .section-news {
   padding: 30px 0;
@@ -4648,7 +4655,7 @@ h2 {
   border-bottom: 1px solid #c8c8c8;
 }
 
-/*============================================advantages================================================*/
+/*============================================5.SECTION-ADVANTAGES================================================*/
 
 .section-advantages {
   padding: 30px 0;
@@ -4666,7 +4673,86 @@ h2 {
   background-color: #004b96;
 }
 
-/*============================================Media================================================*/
+/*============================================6.SECTION-FAQ================================================*/
+
+.section-faq {
+  padding: 50px 0;
+
+  background-color: #fafafa;
+}
+
+.accardion-drop .accardion-drop__link:hover {
+  background-color: #eee;
+}
+
+.accardion-drop .accardion__title:hover {
+  background-color: #eee;
+}
+
+.accardion__title,
+.accardion-drop__link {
+  position: relative;
+
+  display: block;
+
+  padding: 15px 30px 15px 15px;
+
+  -webkit-transition: 300ms;
+       -o-transition: 300ms;
+          transition: 300ms;
+
+  color: #333;
+
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.accardion__title::after {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+
+  margin-top: -6px;
+
+  content: '\f078';
+
+  font-family: FontAwesome;
+  font-size: 12px;
+}
+
+.js-accardion {
+  margin-bottom: 15px;
+
+  -webkit-transition: 300ms;
+       -o-transition: 300ms;
+          transition: 300ms;
+
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+          box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+}
+
+.js-accardion > .accardion-drop {
+  background-color: #fff;
+}
+
+.js-accardion.open {
+  background-color: #3f51b5;
+}
+
+.js-accardion.open > .accardion__title {
+  color: #fff;
+}
+
+.accardion__item.open > .accardion__title::after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+/*============================================7.SECTION-MEDIA================================================*/
 
 .media-group {
   display: -webkit-box;
@@ -4719,13 +4805,13 @@ video {
   right: 0;
 }
 
-/*============================================gov================================================*/
+/*============================================8.SECTION-GOV================================================*/
 
 .section-gov .marquee__content {
   padding: 20px 0;
 }
 
-/*============================================Footer==================================================*/
+/*============================================9.FOOTER==================================================*/
 
 .footer {
   padding: 30px 0 40px 0;
@@ -4795,9 +4881,17 @@ video {
   color: #ffd500;
 }
 
-/*============================================Media====================================================*/
+/*============================================ 10.MEDIA-RULE ====================================================*/
 
 /*=========================Media screen 1170px=============================================*/
+
+/*=========================Media screen 992px=============================================*/
+
+/*=========================Media screen 828px=============================================*/
+
+/*=========================Media screen 578px=============================================*/
+
+/*=========================Media screen 450px=============================================*/
 
 @media only screen and (min-width: 1170px) {
   .menu__item:hover > .drop-menu {
