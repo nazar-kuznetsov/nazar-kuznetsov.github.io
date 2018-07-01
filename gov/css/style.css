@@ -4010,7 +4010,7 @@ h2 {
   z-index: 10;
   top: 0;
   left: 0;
-
+  will-change: transform;
   width: 100%;
 
   -webkit-box-pack: center;
