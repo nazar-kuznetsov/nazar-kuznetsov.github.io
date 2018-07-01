@@ -256,12 +256,7 @@ Preloader
   font-weight: normal;
   font-style: normal;
 
-  src: url('../fonts/font-awesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), 
-  url('../fonts/font-awesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), 
-  url('../fonts/font-awesome/fontawesome-webfont.woff?v=4.7.0') format('woff'), 
-  url('../fonts/font-awesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
-   url('../fonts/font-awesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg'),
-  url('../fonts/font-awesome/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/font-awesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/font-awesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/font-awesome/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/font-awesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/font-awesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg'), url('../fonts/font-awesome/fontawesome-webfont.eot?v=4.7.0');
 }
 
 .fa {
@@ -3494,7 +3489,7 @@ body {
   color: #646464;
   background-color: #fff;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto';
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.4;
@@ -3670,8 +3665,6 @@ h2 {
 
   vertical-align: top;
   white-space: normal;
-
-  color: #fff;
 }
 
 .marquee__item a {
@@ -3998,9 +3991,9 @@ h2 {
 .header {
   position: relative;
 
-  -webkit-transition: .5s;
-       -o-transition: .5s;
-          transition: .5s;
+  -webkit-transition: 1s;
+       -o-transition: 1s;
+          transition: 1s;
 
   color: #fff;
 }
@@ -4010,13 +4003,14 @@ h2 {
   z-index: 10;
   top: 0;
   left: 0;
-  will-change: transform;
+
   width: 100%;
 
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
           justify-content: center;
+  will-change: transform;
 }
 
 .header.fixed .top-line .icon {
@@ -4029,6 +4023,12 @@ h2 {
 
 .header.fixed .menu__link {
   padding: 12px 15px;
+
+  -webkit-transition: .5s;
+       -o-transition: .5s;
+          transition: .5s;
+
+  will-change: transform;
 }
 
 .header.fixed .btn-toggle {
@@ -4049,10 +4049,13 @@ h2 {
   z-index: 10;
   top: 100%;
   left: 0;
-  max-height: calc(100vh - 122px);
+
   display: none;
   overflow-y: auto;
+
   width: 100%;
+  max-height: -webkit-calc(100vh - 122px);
+  max-height:         calc(100vh - 122px);
   padding: 20px 0;
 
   background-color: #004899;
@@ -4834,6 +4837,12 @@ video {
 
   .menu-mobile {
     display: block;
+
+    padding: 10px 0 !important;
+  }
+
+  .header-main {
+    padding: 10px 0;
   }
 
   .nav {
@@ -4843,11 +4852,13 @@ video {
     left: 0;
 
     display: none;
-   
-    flex-direction: column;
-    
+    overflow-y: auto;
+            flex-direction: column;
+
     width: 100%;
-    padding: 20px 0;
+    max-height: -webkit-calc(100vh - 122px);
+    max-height:         calc(100vh - 122px);
+    padding: 20px 15px;
 
     background-color: #00529e;
 
@@ -4855,37 +4866,27 @@ video {
     -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
-    max-height:  calc(100vh - 122px);
-    overflow-y: scroll;   
-
-    .actual-news::-webkit-scrollbar-track {
-  -webkit-border-radius: 10px;
-          border-radius: 10px;
-  background-color: #f5f5f5;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-}
-
   }
 
   .nav::-webkit-scrollbar-track {
-  -webkit-border-radius: 10px;
-          border-radius: 10px;
-  background-color: #f5f5f5;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-}
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    background-color: #f5f5f5;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  }
 
-.nav::-webkit-scrollbar {
-  width: 5px;
+  .nav::-webkit-scrollbar {
+    width: 5px;
 
-  background-color: #f5f5f5;
-}
+    background-color: #f5f5f5;
+  }
 
-.nav::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-          border-radius: 10px;
-  background-color: #c0c0c0;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-}
+  .nav::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    background-color: #c0c0c0;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  }
 
   .nav .container {
     padding: 0 20px;
@@ -4977,7 +4978,8 @@ video {
 
   .drop-menu__link {
     position: relative;
-    padding-right: 20px;
+
+    padding-right: 10px;
   }
 
   .drop-menu__title {
@@ -5198,6 +5200,10 @@ video {
 
   .article {
     border-bottom: 1px solid #eee;
+  }
+
+  .nav {
+    padding: 20px 0;
   }
 
   .logo__title span {
