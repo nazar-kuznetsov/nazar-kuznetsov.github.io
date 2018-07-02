@@ -3661,6 +3661,8 @@ body {
 
   min-width: 320px;
 
+  letter-spacing: .5px;
+
   color: #646464;
   background-color: #fff;
 
@@ -4176,6 +4178,26 @@ h3 {
   -ms-flex-pack: end;
   -webkit-justify-content: flex-end;
           justify-content: flex-end;
+}
+
+.drop-menu__inner .drop-menu__title .drop-menu__link-title::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding-left: 15px;
+
+  content: '\f067';
+
+  font-family: FontAwesome;
+}
+
+.drop-menu__inner .drop-menu__title.open > .drop-menu__link-title {
+  color: #ffd500;
+}
+
+.drop-menu__inner .drop-menu__title.open > .drop-menu__link-title::after {
+  content: '\f068';
 }
 
 .btn-search {
