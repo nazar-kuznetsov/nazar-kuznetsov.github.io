@@ -84,6 +84,8 @@
 
   text-align: center;
 
+  background-color: #005bbb;
+
   -webkit-align-items: center;
           align-items: center;
   -webkit-box-align: center;
@@ -107,17 +109,17 @@
 .slick-dots li button {
   display: block;
 
-  width: 16px;
-  height: 16px;
+  width: 13px;
+  height: 13px;
   margin: 0 5px;
   padding: 0;
 
   cursor: pointer;
 
-  border: 4px solid transparent;
+  border: 2px solid #fff;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  background: #b7b7b7;
+  background: transparent;
 
   font-size: 0;
 }
@@ -128,8 +130,8 @@
 }
 
 .slick-dots li.slick-active button {
-  border-color: #b7b7b7;
-  background-color: #434648;
+  border-color: #fff;
+  background-color: #fff;
 }
 
 /* Slider */
@@ -3686,11 +3688,7 @@ body {
   -webkit-align-items: center;
           align-items: center;
   -webkit-box-align: center;
-  -webkit-box-pack: justify;
   -ms-flex-align: center;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-          justify-content: space-between;
 }
 
 .wrapper {
@@ -3898,7 +3896,9 @@ h3 {
 
 .logo {
   width: 100%;
-  max-width: 355px;
+  max-width: 290px;
+
+  text-transform: uppercase;
 }
 
 .logo__title {
@@ -3916,13 +3916,13 @@ h3 {
 }
 
 .logo__title img {
-  height: 60px;
+  height: 80px;
 }
 
 .logo__title h1 {
   padding-left: 10px;
 
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
 }
 
@@ -4042,6 +4042,10 @@ h3 {
   color: #fff;
 }
 
+.header .logo h1 {
+  padding-left: 15px;
+}
+
 .header.fixed {
   position: fixed;
   z-index: 10;
@@ -4061,16 +4065,34 @@ h3 {
   padding: 5px 7px;
 }
 
+.header.fixed .nav {
+  -webkit-align-items: centerb;
+          align-items: centerb;
+  -webkit-box-align: centerb;
+  -ms-flex-align: centerb;
+}
+
+.header.fixed .header-main {
+  padding-top: 0;
+}
+
+.header.fixed .logo h1 {
+  font-size: 12px;
+}
+
 .header.fixed .logo img {
   height: 50px;
 }
 
 .header.fixed .menu__link {
-  padding: 12px 15px;
+  max-width: 125px;
+  padding: 7px 15px;
 
   -webkit-transition: .5s;
        -o-transition: .5s;
           transition: .5s;
+
+  font-size: 13px;
 
   will-change: transform;
 }
@@ -4100,7 +4122,8 @@ h3 {
   width: 100%;
   max-height: -webkit-calc(100vh - 122px);
   max-height:         calc(100vh - 122px);
-  padding: 20px 0;
+  padding: 15px 0;
+  padding: 20px 0 20;
 
   background-color: #004899;
 }
@@ -4237,6 +4260,8 @@ h3 {
 }
 
 .header-main {
+  padding-top: 15px;
+
   background-color: #005bbb;
 }
 
@@ -4245,6 +4270,19 @@ h3 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display:         flex;
+
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-align: center;
+  -webkit-box-flex: 1;
+  -webkit-box-pack: justify;
+  -ms-flex-align: center;
+  -webkit-flex-grow: 1;
+          flex-grow: 1;
+  -ms-flex-pack: justify;
+  -ms-flex-positive: 1;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
 }
 
 .menu {
@@ -4253,7 +4291,19 @@ h3 {
   display: -ms-flexbox;
   display:         flex;
 
-  margin-left: auto;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+          flex-grow: 1;
+  -ms-flex-positive: 1;
+}
+
+.menu__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+
+  width: 100%;
 
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -4261,26 +4311,15 @@ h3 {
           justify-content: center;
 }
 
-.menu__item:hover > .menu__link {
+.menu__item:hover {
   background-color: #004899;
-}
-
-.menu__item:hover > .menu__link::before {
-  width: 100%;
-}
-
-.menu__item:hover > .menu__link::after {
-  color: #ffd500;
 }
 
 .menu__link {
   position: relative;
 
-  display: block;
-
-  min-width: 100px;
   height: 100%;
-  padding: 22px 15px;
+  padding: 32px 10px;
 
   -webkit-transition: .3s;
        -o-transition: .3s;
@@ -4290,8 +4329,8 @@ h3 {
 
   color: #fff;
 
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.2;
 }
 
 .menu__link.active {
@@ -4314,7 +4353,6 @@ h3 {
   width: 0;
   height: 2px;
 
-  content: '';
   -webkit-transition: 300ms;
        -o-transition: 300ms;
           transition: 300ms;
@@ -4332,8 +4370,6 @@ h3 {
 
   padding-left: 10px;
 
-  content: ' \f107';
-
   font-family: 'FontAwesome';
 }
 
@@ -4346,7 +4382,7 @@ h3 {
 
   height: 100%;
   margin-left: auto;
-  padding: 24px;
+  padding: 41px 41px;
 }
 
 .btn-toggle.active {
@@ -4376,6 +4412,8 @@ h3 {
 
 .btn-toggle {
   display: inline-block;
+
+  margin: 0 50px;
 
   cursor: pointer;
 
@@ -4415,10 +4453,6 @@ h3 {
 
 .menu-mobile {
   display: none;
-}
-
-.btn-menu {
-  margin: 0 50px;
 }
 
 /*============================================2.SECTION-WELLCOME==================================================*/
@@ -4911,6 +4945,10 @@ video {
   text-transform: uppercase;
 }
 
+.footer .logo img {
+  height: auto;
+}
+
 .footer .row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5072,8 +5110,20 @@ video {
     padding: 10px 0 !important;
   }
 
+  .flex-between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+  }
+
   .header-main {
     padding: 10px 0;
+  }
+
+  .header-main .logo {
+    max-width: 350px;
+    padding: 10px;
   }
 
   .nav {
@@ -5123,6 +5173,10 @@ video {
     padding: 0 20px;
   }
 
+  .btn-toggle {
+    margin: 0;
+  }
+
   .drop-menu .flex {
     margin: 0;
   }
@@ -5136,6 +5190,19 @@ video {
     -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
+  }
+
+  .menu__item {
+            flex-direction: column;
+
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+  }
+
+  .menu__item:hover {
+    background-color: transparent;
   }
 
   .menu__item:hover > .menu__link {
@@ -5155,10 +5222,12 @@ video {
   }
 
   .menu__link {
-    padding: 10px 20px;
+    max-width: none !important;
+    padding: 8px 20px !important;
 
     text-align: left;
 
+    font-size: 13px;
     font-weight: 400;
   }
 
@@ -5251,6 +5320,10 @@ video {
   .btn-toggle.active {
     color: #ffd500;
     background-color: transparent;
+  }
+
+  .btn-menu {
+    padding: 8px 20px !important;
   }
 
   .menu-mobile {
