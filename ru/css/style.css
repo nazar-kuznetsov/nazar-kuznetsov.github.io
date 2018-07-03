@@ -3919,7 +3919,8 @@ h3 {
   height: 80px;
 }
 
-.logo__title h1 {
+.logo__title h1,
+.logo__title span {
   padding-left: 10px;
 
   font-size: 16px;
@@ -4941,7 +4942,9 @@ video {
   color: #fff;
 }
 
-.footer .logo h1 {
+.footer .logo span {
+  max-width: 480px;
+
   text-transform: uppercase;
 }
 
