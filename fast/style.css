@@ -25,9 +25,10 @@ img {
 .slider__item {
   display: inline-block;
   max-width: 0;
-  transition: max-width 0.5s;
+  transition: max-width .5s;
   overflow: hidden;
   position: absolute;
+  width: 100%;
   /* position: absolute;
   top: 0;
   left: 0;
@@ -36,14 +37,19 @@ img {
   height: 100%; */
 }
 
-.active {
-  z-index: 10;
 
-}
 
 
 .buttons {
-  position: absolute;
+  position: fixed;
   right: 50%;
+  transform: translateX(-50%);
   top: 0;
+  z-index: 100;
+}
+
+.active {
+  max-width: 100%;
+  z-index: 10;
+
 }
