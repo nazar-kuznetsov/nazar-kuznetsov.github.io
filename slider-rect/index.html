@@ -1,9 +1,10 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Clip carousel</title>
 
@@ -15,93 +16,54 @@
 <body>
 
 
-<section class="section-intro">
-    <div class="container">
-        <div class="photo-slider-wrap">
-            <div class="photo-slider">
-                <div class="back-img active" style="background-image: url('./bg2.jpg')">
-                    <div class="caption">
-                        01 Compare Prices Find The
+    <section class="section-intro">
+        <div class="container">
+            <div class="photo-slider-wrap">
+                <div class="photo-slider">
+                    <div class="back-img active" style="background-image: url('./bg2.jpg')">
+                        <div class="caption">
+                            01 Compare Prices Find The
+                        </div>
                     </div>
-                </div>
-                <div class="back-img" style="background-image: url('./bg3.jpg')">
-                    <div class="caption">
-                        02 The Skinny On Lcd Monitors
+                    <div class="back-img" style="background-image: url('./bg3.jpg')">
+                        <div class="caption">
+                            02 The Skinny On Lcd Monitors
+                        </div>
                     </div>
-                </div>
-                <div class="back-img" style="background-image: url('./bg1.jpg')">
-                    <div class="caption">
-                        03 Help Finding Information Online
+                    <div class="back-img" style="background-image: url('./bg1.jpg')">
+                        <div class="caption">
+                            03 Help Finding Information Online
+                        </div>
                     </div>
+
                 </div>
 
+                <div class="slider-arrow slide-next" id="slide-next">
+                    <i class="icon icon-right-open-big"></i>
+                </div>
+                <div class="slider-arrow slide-prev" id="slide-prev">
+                    <i class="icon icon-left-open-big"></i>
+                </div>
             </div>
 
-            <div class="slider-arrow slide-next" id="slide-next">
-                <i class="icon icon-right-open-big"></i>
-            </div>
-            <div class="slider-arrow slide-prev" id="slide-prev">
-                <i class="icon icon-left-open-big"></i>
-            </div>
+
+
+            <ul class="circle-list" id="circle-list">
+                <li class="circle-active" data-index="0">01 Compare Prices Find The</li>
+                <li data-index="1">02 The Skinny On Lcd Monitors</li>
+                <li data-index="2">03 Help Finding Information Online</li>
+            </ul>
+
         </div>
-
-        <div class="photo-slider-thumb">
-            <div>
-                <div class="back-img">
-                    <div class="caption">
-                        Lorem 1
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="back-img">
-                    <div class="caption">
-                        Lorem 2
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="back-img">
-                    <div class="caption">
-                        Lorem 3
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="back-img">
-                    <div class="caption">
-                        Lorem 4
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="back-img">
-                    <div class="caption">
-                        Lorem 5
-                    </div>
-                </div>
-            </div>
-        </div>
+    </section>
 
 
-
-
-
-
-  <ul class="circle-list" id="circle-list">
-      <li class="circle-active" data-index="0">01 Compare Prices Find The</li>
-      <li data-index="1">02 The Skinny On Lcd Monitors</li>
-      <li data-index="2">03 Help Finding Information Online</li>
-  </ul>
-
-    </div>
-</section>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
-<script src="build/clip_carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous"></script>
+    <script src="clip_carousel.js"></script>
 
 
 </body>
+
 </html>

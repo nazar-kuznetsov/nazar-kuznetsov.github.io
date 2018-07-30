@@ -22,11 +22,11 @@ var ClipCarousel = function () {
 
         var $slides = $slider.find('>div');
 
-        self.$thumbs = $(options.thumbs_selector);
+        // self.$thumbs = $(options.thumbs_selector);
 
         self.slides = self.create_slides_arr($slides);
 
-        self.thumbs = self.create_thumbs_arr();
+        // self.thumbs = self.create_thumbs_arr();
 
         self.slider_width = 0;
         self.slider_height = 0;
@@ -49,29 +49,29 @@ var ClipCarousel = function () {
 
         self.slides_count = self.slides.length;
 
-        self.init_thumbs_index();
+        //   self.init_thumbs_index();
 
         self.get_slide_size();
-        self.get_thumb_size();
+        // self.get_thumb_size();
 
-        self.init_pagination_thumbs();
+        // self.init_pagination_thumbs();
 
         if (options.autoplay) {
             self.play();
         }
     }
 
+    // init_pagination_thumbs(){
+
+    //     let self = this;
+
+    //     self.$thumbs.find('>div').on('click', function(){
+    //         self.go_to_index($(this).data('slide_index'))
+    //     })
+    // }
+
+
     _createClass(ClipCarousel, [{
-        key: 'init_pagination_thumbs',
-        value: function init_pagination_thumbs() {
-
-            var self = this;
-
-            self.$thumbs.find('>div').on('click', function () {
-                self.go_to_index($(this).data('slide_index'));
-            });
-        }
-    }, {
         key: 'get_slide_size',
         value: function get_slide_size() {
 
@@ -85,40 +85,37 @@ var ClipCarousel = function () {
                 self.slider_height = self.slides[0].element.outerHeight();
             });
         }
-    }, {
-        key: 'get_thumb_size',
-        value: function get_thumb_size() {
+        /*
+            get_thumb_size(){
+        
+                let self = this;
+        
+               // self.thumb_width = self.thumbs[0].element.outerWidth();
+               // self.thumb_height = self.thumbs[0].element.outerHeight();
+        
+              //  $(window).on('resize', function(){
+                 //   self.thumb_width = self.thumbs[0].element.outerWidth();
+                  //  self.thumb_height = self.thumbs[0].element.outerHeight();
+              // })
+        
+            }
+        */
+        // create_thumbs_arr() {
+        //     let self = this;
 
-            var self = this;
+        //     self.$thumbs.find('>div:eq(0)').remove();
 
-            self.thumb_width = self.thumbs[0].element.outerWidth();
-            self.thumb_height = self.thumbs[0].element.outerHeight();
+        //     let thumb_arr = [];
+        //     self.$thumbs.find('>div').each(function () {
 
-            $(window).on('resize', function () {
-                self.thumb_width = self.thumbs[0].element.outerWidth();
-                self.thumb_height = self.thumbs[0].element.outerHeight();
-            });
-        }
-    }, {
-        key: 'create_thumbs_arr',
-        value: function create_thumbs_arr() {
-            var self = this;
+        //         thumb_arr.push({
+        //             element: $(this)
+        //         });
+        //     })
 
-            self.$thumbs.find('>div:eq(0)').remove();
+        //     return thumb_arr;
+        // }
 
-            var thumb_arr = [];
-            self.$thumbs.find('>div').each(function () {
-
-                thumb_arr.push({
-                    element: $(this)
-                });
-            });
-
-            // thumb_arr.forEach(function(item) {
-            //     item.element[0].children[0].removeAttribute('style');
-            // })
-            return thumb_arr;
-        }
     }, {
         key: 'create_slides_arr',
         value: function create_slides_arr($slides) {
@@ -133,7 +130,7 @@ var ClipCarousel = function () {
 
                 slides.push({
                     element: $(this),
-                    element_thumb_content: self.$thumbs.find('>div:eq(' + slider_counter + ')>div'),
+                    // element_thumb_content: self.$thumbs.find('>div:eq(' + slider_counter + ')>div'),
                     slide_settings: $(this).data('expandCarousel')
                 });
 
@@ -142,27 +139,29 @@ var ClipCarousel = function () {
 
             return slides;
         }
-    }, {
-        key: 'init_thumbs_index',
-        value: function init_thumbs_index() {
 
-            var self = this;
+        // init_thumbs_index() {
 
-            var slides_counter = 0;
-            var thumb_counter = 0;
+        //     let self = this;
 
-            self.slides.forEach(function () {
+        //     let slides_counter = 0;
+        //     let thumb_counter = 0;
 
-                if (slides_counter != self.current_index) {
+        //     self.slides.forEach(function () {
 
-                    self.thumbs[thumb_counter].element.data('slide_index', slides_counter);
+        //         if (slides_counter != self.current_index) {
 
-                    thumb_counter++;
-                }
+        //             //self.thumbs[thumb_counter].element.data('slide_index', slides_counter);
 
-                slides_counter++;
-            });
-        }
+        //             thumb_counter++;
+        //         }
+
+        //         slides_counter++;
+        //     });
+
+        // }
+
+
     }, {
         key: 'play',
         value: function play() {
@@ -246,7 +245,8 @@ var ClipCarousel = function () {
             self.set_animate_duration();
 
             self.slider_animation();
-            self.thumb_animation();
+            //  self.thumb_animation();
+
 
             self.current_index = self.next_index;
 
@@ -295,75 +295,82 @@ var ClipCarousel = function () {
             self.slider_animation_tl.set(self.slides[self.next_index].element, { className: '-=next' });
             self.slider_animation_tl.set(self.slides[self.next_index].element, { className: '+=active' });
         }
-    }, {
-        key: 'thumb_animation',
-        value: function thumb_animation() {
 
-            var self = this;
+        // thumb_animation(){
 
-            self.thumbs.forEach(function (thumb) {
+        //     let self = this;
 
-                if (thumb.element.data('slide_index') == self.next_index) {
+        //     self.thumbs.forEach(function (thumb) {
 
-                    if (self.thumb_animation_tl.isActive() === true) {
-                        self.thumb_animation_tl.progress(1);
-                    }
+        //         if (thumb.element.data('slide_index') == self.next_index) {
 
-                    // thumb.element.append(self.slides[self.current_index].element_thumb_content);
+        //             if ( self.thumb_animation_tl.isActive() === true ) {
+        //                 self.thumb_animation_tl.progress(1);
+        //             }
 
-                    var next_thumb = $(thumb.element).find('>div:eq(1)');
-                    var current_thumb = $(thumb.element).find('>div:eq(0)');
+        //             // thumb.element.append(self.slides[self.current_index].element_thumb_content);
 
-                    self.thumb_animation_tl.set(current_thumb, { className: '+=prev' });
-                    self.thumb_animation_tl.set(next_thumb, { className: '+=next' });
+        //             let next_thumb = $(thumb.element).find('>div:eq(1)');
+        //             let current_thumb = $(thumb.element).find('>div:eq(0)');
 
-                    // if (self.animate_direction == 'forward') {
-                    //     self.thumb_animation_tl.fromTo(current_thumb, self.settings.animate_duration,
-                    //         {clip: 'rect(0, ' + self.thumb_width + 'px, ' + self.thumb_height + 'px, 0px)'},
-                    //         {clip: 'rect(0, 0px,' + self.thumb_height + 'px, 0px)'})
-                    // }
-                    // else {
-                    //     self.thumb_animation_tl.fromTo(current_thumb, self.settings.animate_duration,
-                    //         {clip: 'rect(0, ' + self.thumb_width + 'px, ' + self.thumb_height + 'px, 0px)'},
-                    //         {clip: 'rect(0, ' + self.thumb_width + 'px,' + self.thumb_height + 'px, ' + self.thumb_width + 'px)'})
-                    // }
+        //             self.thumb_animation_tl.set(current_thumb, {className:'+=prev'})
+        //             self.thumb_animation_tl.set(next_thumb, {className:'+=next'})
 
-                    self.thumb_animation_tl.set(current_thumb, { className: '-=prev' });
-                    self.thumb_animation_tl.set(current_thumb, { className: '-=active' });
-                    self.thumb_animation_tl.set(next_thumb, { className: '-=next' });
-                    self.thumb_animation_tl.set(next_thumb, { className: '+=active' });
+        //             // if (self.animate_direction == 'forward') {
+        //             //     self.thumb_animation_tl.fromTo(current_thumb, self.settings.animate_duration,
+        //             //         {clip: 'rect(0, ' + self.thumb_width + 'px, ' + self.thumb_height + 'px, 0px)'},
+        //             //         {clip: 'rect(0, 0px,' + self.thumb_height + 'px, 0px)'})
+        //             // }
+        //             // else {
+        //             //     self.thumb_animation_tl.fromTo(current_thumb, self.settings.animate_duration,
+        //             //         {clip: 'rect(0, ' + self.thumb_width + 'px, ' + self.thumb_height + 'px, 0px)'},
+        //             //         {clip: 'rect(0, ' + self.thumb_width + 'px,' + self.thumb_height + 'px, ' + self.thumb_width + 'px)'})
+        //             // }
 
-                    //self.thumb_animation_tl.set(current_thumb, {clip: 'rect(0, ' + self.thumb_width + 'px, ' + self.thumb_height + 'px, 0px)'})
+        //             self.thumb_animation_tl.set(current_thumb, {className:'-=prev'})
+        //             self.thumb_animation_tl.set(current_thumb, {className:'-=active'})
+        //             self.thumb_animation_tl.set(next_thumb, {className:'-=next'})
+        //             self.thumb_animation_tl.set(next_thumb, {className:'+=active'})
+
+        //             //self.thumb_animation_tl.set(current_thumb, {clip: 'rect(0, ' + self.thumb_width + 'px, ' + self.thumb_height + 'px, 0px)'})
 
 
-                    thumb.element.data('slide_index', self.current_index);
-                }
-            });
-        }
+        //             thumb.element.data('slide_index', self.current_index)
+
+        //         }
+        //     })
+        // }
+
     }]);
 
     return ClipCarousel;
 }();
 
 var photo_slider = new ClipCarousel({
-    slider_selector: '.photo-slider',
-    thumbs_selector: '.photo-slider-thumb'
+    slider_selector: '.photo-slider'
 });
 
+// кастомная переключалка
 circleItem.forEach(function (item) {
-    item.addEventListener('click', function () {
-        if (this.classList.contains('circle-active')) return;
-
-        circleItem.forEach(function (element) {
-            element.classList.remove('circle-active');
-        });
-
-        var index = this.getAttribute('data-index');
-        photo_slider.go_to_index(+index);
-        this.classList.add('circle-active');
-    });
+    item.addEventListener('click', customToggle);
 });
 
+/* circle active это активный класс для элемента списка переключалки (это текст типо кнопок под картинками) */
+function customToggle() {
+    if (this.classList.contains('circle-active')) return;
+
+    circleItem.forEach(function (element) {
+        element.classList.remove('circle-active');
+    });
+
+    var index = this.getAttribute('data-index');
+
+    this.classList.add('circle-active');
+
+    photo_slider.go_to_index(+index);
+}
+
+// кнопки можно удалить
 $('#slide-next').on('click', function () {
     photo_slider.go_to('forward');
 });
