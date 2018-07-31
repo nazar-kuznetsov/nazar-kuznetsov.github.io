@@ -87,17 +87,17 @@ var ClipCarousel = function () {
         }
         /*
             get_thumb_size(){
-        
+
                 let self = this;
-        
+
                // self.thumb_width = self.thumbs[0].element.outerWidth();
                // self.thumb_height = self.thumbs[0].element.outerHeight();
-        
+
               //  $(window).on('resize', function(){
                  //   self.thumb_width = self.thumbs[0].element.outerWidth();
                   //  self.thumb_height = self.thumbs[0].element.outerHeight();
               // })
-        
+
             }
         */
         // create_thumbs_arr() {

@@ -97,13 +97,37 @@ body {
     font-size: 40px;
     color: #fff;
     transition: .5s;
-    position: absolute;
-    top: 50%;
 
-    transform: translateY(-50%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    /* top: 50%;
+
+    transform: translateY(-50%); */
     left: 150px;
     font-weight: 700;
     text-transform: uppercase; }
+
+    .title-count {
+      position: relative;
+      margin-top: auto;
+    }
+
+    .title {
+      margin-top: auto;
+    }
+
+    .title-count:after {
+      content: '/3';
+    }
+
+    .inner-desc {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
   .section-intro .photo-slider > div {
     position: absolute;
     left: 0;
