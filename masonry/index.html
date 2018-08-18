@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * { box-sizing: border-box; }
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+
+.grid {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 25%;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+.grid-item {
+  float: left;
+  padding: 0 15px;
+  margin-bottom: 15px;
+}
+
+.grid-item img {
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+   .grid-item {
+   	width: 50%;
+   }
+}
+
+@media only screen and (max-width: 600px) {
+   .grid-item {
+   	width: 100%;
+   }
+}
+
+  </style>
+
+</head>
+<body>
+
+
+<div class="grid">
+  <div class="grid-sizer"></div>
+  <div class="grid-item">
+    <img src="1.jpg" />
+    <p>Працівниками відділу державної реєстрації друкованих засобів масової інформації та громадських форму...</p>
+  </div>
+  <div class="grid-item">
+    <img src="2.jpg" />
+    <p>Працівниками відділу державної реєстрації друкованих засобів масової інформації та громадських форму...</p>
+  </div>
+  <div class="grid-item">
+    <img src="3.jpg" />
+    <p>Працівниками відділу державної реєстрації друкованих засобів масової інформації та громадських форму...</p>
+  </div>
+  <div class="grid-item">
+    <img src="4.jpg" />
+    <p>Працівниками відділу державної реєстрації друкованих засобів масової інформації та громадських форму...</p>
+  </div>
+    <div class="grid-item">
+    <img src="4.jpg" />
+    <p>Працівниками відділу державної реєстрації друкованих засобів масової інформації та громадських форму...</p>
+  </div>
+  <div class="grid-item">
+    <img src="3.jpg" />
+    <p>Працівниками відділу державної реєстрації друкованих засобів масової інформації та громадських форму...</p>
+  </div>
+  <div class="grid-item">
+    <img src="2.jpg" />
+    <p>Працівниками відділу державної реєстрації друкованих засобів масової інформації та громадських форму...</p>
+  </div>
+  <div class="grid-item">
+    <img src="1.jpg" />
+    <p>Працівниками відділу державної реєстрації друкованих засобів масової інформації та громадських форму...</p>
+  </div>
+  <div class="grid-item">
+    <img src="4.jpg" />
+    <p>Працівниками відділу державної реєстрації друкованих засобів масової інформації та громадських форму...</p>
+  </div>
+  <div class="grid-item">
+    <img src="1.jpg" />
+    <p>Працівниками відділу державної реєстрації друкованих засобів масової інформації та громадських форму...</p>
+  </div>
+  <div class="grid-item">
+    <img src="3.jpg" />
+    <p>Працівниками відділу державної реєстрації друкованих засобів масової інформації та громадських форму...</p>
+  </div>
+  <div class="grid-item">
+    <img src="4.jpg" />
+    <p>Працівниками відділу державної реєстрації друкованих засобів масової інформації та громадських форму...</p>
+  </div>
+
+</div>
+
+
+<script src="imagesLoaded.js"></script>
+  <script src="masonry.js"></script>
+  <script src="common.js"></script>
+</body>
+</html>
