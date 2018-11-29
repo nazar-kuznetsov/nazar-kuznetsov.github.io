@@ -1,0 +1,243 @@
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  z-index: -5;
+
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.st0 {
+  fill: #D6D6D6;
+}
+
+.st1 {
+  fill: #E50E38;
+  stroke: #30E230;
+  stroke-miterlimit: 10;
+}
+
+.st2 {
+  fill: #D1BB39;
+  stroke: #30E230;
+  stroke-miterlimit: 10;
+}
+
+.st3 {
+  fill: none;
+}
+
+.st4 {
+  display: none;
+  fill: #FFFFFF;
+}
+
+.st5 {
+  display: none;
+  enable-background: new;
+}
+
+.st6 {
+  font-family: 'ArialMT';
+}
+
+.st7 {
+  font-size: 12px;
+}
+
+.st8 {
+  display: none;
+  fill: none;
+  stroke: #000000;
+}
+
+.st9 {
+  display: none;
+  fill: none;
+  stroke: #000000;
+  stroke-width: 1.0581;
+}
+
+.st10 {
+  fill: #008B07;
+  stroke: #30E230;
+  stroke-miterlimit: 10;
+}
+
+.st11 {
+  fill: #1E601E;
+}
+
+.st12 {
+  fill: #0D300D;
+  stroke: #30E230;
+  stroke-miterlimit: 10;
+}
+
+.st13 {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 0.25;
+}
+
+.st14 {
+  fill: #0D300D;
+  stroke: #000000;
+  stroke-width: 0.25;
+}
+
+.st15 {
+  fill: #3B60EA;
+  stroke: #30E230;
+  stroke-miterlimit: 10;
+}
+
+.st16 {
+  fill: #E2B910;
+  stroke: #30E230;
+  stroke-miterlimit: 10;
+}
+
+.st17 {
+  fill: #10E250;
+  stroke: #30E230;
+  stroke-miterlimit: 10;
+}
+
+.st18 {
+  fill: #E25B10;
+  stroke: #30E230;
+  stroke-miterlimit: 10;
+}
+
+.st19 {
+  fill: #7CE210;
+  stroke: #30E230;
+  stroke-miterlimit: 10;
+}
+
+.st20 {
+  fill: #9EA1DD;
+  stroke: #30E230;
+  stroke-miterlimit: 10;
+}
+
+.st21 {
+  fill: #14F4C9;
+  stroke: #30E230;
+  stroke-miterlimit: 10;
+}
+
+.st22 {
+  fill: #25D64F;
+  stroke: #30E230;
+  stroke-miterlimit: 10;
+}
+
+.st23 {
+  fill: #C310E2;
+  stroke: #30E230;
+  stroke-miterlimit: 10;
+}
+
+.st24 {
+  fill: #CC1799;
+  stroke: #30E230;
+  stroke-miterlimit: 10;
+}
+
+.st25 {
+  fill: #2900A2;
+  stroke: #453ACE;
+  stroke-miterlimit: 10;
+}
+
+.st26 {
+  fill: #CECDD3;
+  stroke: #453ACE;
+  stroke-miterlimit: 10;
+}
+
+.st27 {
+  fill: #A00054;
+  stroke: #453ACE;
+  stroke-miterlimit: 10;
+}
+
+.st28 {
+  fill: #BFBFC4;
+  stroke: #453ACE;
+  stroke-miterlimit: 10;
+}
+
+.st29 {
+  fill: #24EA6A;
+  stroke: #453ACE;
+  stroke-miterlimit: 10;
+}
+
+.st30 {
+  fill: #AF9FF7;
+  stroke: #453ACE;
+  stroke-miterlimit: 10;
+}
+
+.st31 {
+  fill: #13EAEA;
+  stroke: #453ACE;
+  stroke-miterlimit: 10;
+}
+
+
+body {
+  background-color: #252525;
+  font-family: sans-serif;
+}
+
+button {
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  outline: none;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  left: 0;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  transition: .3s;
+  background-color: #159e15;
+  font-size: 16px;
+}
+
+button.active {
+  background-color: red;
+}
+
+body .st0 {
+  transition: 0.3s;
+  transition: all 0.5s ease;
+
+}
+
+body.active .st0 {
+
+  animation: move 2s linear infinite;
+
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1 !important;
+  /* z-index: 11; */
+}
+
