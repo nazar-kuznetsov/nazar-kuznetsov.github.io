@@ -20,7 +20,7 @@
     <section class="wellcome">
 
       <!-- BEGIN: HEADER -->
-      <header class="header">
+      <header id="header" class="header">
         <div class="container header__flex">
 
           <div class="logo">
@@ -29,7 +29,15 @@
             </a>
           </div>
 
-          <nav class="nav">
+
+            <button id="hamburgers" class="hamburgers">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+
+          <nav id="nav" class="nav">
             <ul class="nav__list">
               <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
               <li class="nav__item"><a href="#" class="nav__link">Works</a></li>
@@ -72,7 +80,7 @@
       <!-- BEGIN: SERVICES -->
       <section class="services">
         <div class="container">
-          <div class="row">
+          <div class="row services__row">
             <div class="services__col services__col-left">
               <h2 class="services__title title">EXPERIENCE</h2>
               <strong class="services__strong">all EXPERT DIGITAL SERVICES</strong>
@@ -208,7 +216,7 @@
   <!-- BEGIN: FOOTER -->
   <footer class="footer">
     <div class="container">
-      <div class="row">
+      <div class="row footer__row">
         <div class="footer__contact contact">
           <h2 class="footer__title contact__title">AGENCY CREATIVE</h2>
           <p class="contact__info">© 2015 k3nnyart. All rights reserved.</p>
@@ -226,7 +234,7 @@
           <a class="contact__info" href="fax:+16462169789">Fax: +1 646-216-9789</a>
           <a class="contact__info" href="mailto:info@yourdomain.com">Email: info@yourdomain.com</a>
         </div>
-        <div class="footer__contact contact">
+        <div class="footer__contact contact footer__subscribe">
           <h3 class="contact__title">Subscribe to our mailing list</h3>
           <form class="subscribe" action="#" method="POST">
             <input class="subscribe__input" type="email" required placeholder="Enter your email">
