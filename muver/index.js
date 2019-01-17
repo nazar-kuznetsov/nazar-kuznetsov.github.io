@@ -1,9 +1,22 @@
+
+/*
+*********************************************************************************************
+
+
+
+ИСПРАВЛЕНО
+ТЕПЕРЬ МОЖЕТ БЫТЬ ЛЮБОЕ КОИЛЧЕСТВО БУКВ В JS МЕНЯТЬ ИЛИ УСТАНАВЛИТЬ КОЛИЧЕСТВО БУКВ НЕ НУЖНО
+
+
+
+**********************************************************************************************
+*/
 const parent = document.querySelector('.handle'); // родитель блок
 const circle = document.querySelector('#js-circle'); // кружок
 const jsLine = document.querySelector('#js-line-active'); // линия активная
 const line = document.querySelector('.line'); // линия не активная
 const jsTitle1 = document.querySelector('#js-title1'); // заголовок 1
-const jsTitle2 = document.querySelector('#js-title2');
+
 const lineWidth = line.clientWidth; // ширина линии
 const parentWidth = parent.clientWidth; // ширина родителя
 const sectionSVG = document.querySelector('.section-svg'); // секция другая
@@ -28,8 +41,7 @@ jsBack.addEventListener('click', function () {
 /* Делим ширину родительсокго блока на длину текста
 ==========================================================================*/
 const titles = {
-  length1: Math.round(parentWidth / jsTitle1.textContent.length),
-  length2: Math.round(parentWidth / jsTitle2.textContent.length)
+  length1: Math.round(parentWidth / jsTitle1.textContent.length)
 }
 
 /* Выделяет жирным слово от 0 до номера букву которая прийдет в position
@@ -54,7 +66,7 @@ const end = () => {
     sectionSVG.classList.add('show');
     firstSection.classList.remove('show');
     parent.classList.remove('active');
-  }, 500);
+  }, 200); // задержка после того как кружок попал в конец 
 
 }
 
@@ -62,7 +74,7 @@ const end = () => {
 ==========================================================================*/
 document.querySelector('.circle__end').addEventListener('click', function () {
   end();
-  styling(9);
+  styling(titles.length1);
   parent.classList.add('active');
 })
 
@@ -70,40 +82,30 @@ document.querySelector('.circle__end').addEventListener('click', function () {
 ==========================================================================*/
 line.addEventListener('click', move);
 
-let counter = 0;
 
-
+let letter = Math.round(titles.length1 / parentWidth * 100); // сколько одна буква это процентов от ширины родителя
 
 /* Функция движения
 ==========================================================================*/
 function move(event) {
-  const offset = {
-    'left': event.pageX - parent.offsetLeft
-  }
+  const offset = { 'left': event.pageX - parent.offsetLeft };
 
   const left = offset.left;
-
-  counter = left;
-
-
-  if (counter < 18) {
+  let distance = Math.round(left / parentWidth * 100);
+  
+  if (left <= 30) {
     jsTitle1.innerHTML = newStr1;
+ 
     parent.classList.remove('active');
   }
   // ширина линии разделить на количество букву (здесь первая буква)
-  if (counter > titles.length1) {
-    styling(1);
+  if ((distance + 5) >= letter) {
     parent.classList.add('active');
   }
-  if (counter > titles.length1 * 2) styling(2); // попали на вторую букву
-  if (counter > titles.length1 * 3) styling(3); // попали на букву 3
-  if (counter > titles.length1 * 4) styling(4); // попали на букву 4
-  if (counter > titles.length1 * 5) styling(5); // попали на букву 5
-  if (counter > titles.length1 * 6) styling(6); // попали на букву 6
-  if (counter > titles.length1 * 7) styling(7); // попали на букву 7
-  if (counter > titles.length1 * 8) styling(8); // попали на букву 8
-  if (counter >= titles.length1 * 9 - 50) { // попали на букву 9
-    styling(9);
+  
+  styling((distance + 5) / letter);
+
+  if (distance >= 95) { // удалить собития движения мишки
     window.removeEventListener('mousemove', move);
   }
 
