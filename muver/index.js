@@ -45,9 +45,8 @@ let timerID;
 /* Переход на жругую страницу
 ==========================================================================*/
 const end = () => {
-  circle.style.left = `532px`;
-  jsLine.style.width = `532px`;
-
+  circle.style.left = `${parentWidth - 18}px`;
+  jsLine.style.width = `${parentWidth - 18}px`;
   clearInterval(timerID);
 
   timerID = setTimeout(() => {
@@ -73,11 +72,19 @@ line.addEventListener('click', move);
 
 let counter = 0;
 
+
+
 /* Функция движения
 ==========================================================================*/
 function move(event) {
-  const left = event.clientX - 401;
+  const offset = {
+    'left': event.pageX - parent.offsetLeft
+  }
+
+  const left = offset.left;
+
   counter = left;
+
 
   if (counter < 18) {
     jsTitle1.innerHTML = newStr1;
@@ -107,8 +114,8 @@ function move(event) {
   }
   // двигаем кружок и добавляем синию линию
   if (left < 0) return false;
-  circle.style.left = `${event.clientX - 401}px`;
-  jsLine.style.width = `${event.clientX - 401}px`;
+  circle.style.left = `${left}px`;
+  jsLine.style.width = `${left}px`;
 
 }
 
