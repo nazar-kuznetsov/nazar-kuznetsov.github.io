@@ -17,7 +17,7 @@ const line = document.querySelector('.line'); // линия не активна�
 const jsTitle1 = document.querySelector('#js-title1'); // заголовок 1
 
 const lineWidth = line.clientWidth; // ширина линии
-const parentWidth = parent.clientWidth; // ширина родителя
+let parentWidth = parent.clientWidth; // ширина родителя
 const sectionSVG = document.querySelector('.section-svg'); // секция другая
 const firstSection = document.querySelector('.first-section'); // первая секция
 const jsBack = document.querySelector('#js-back'); // кнопка назад
@@ -126,7 +126,10 @@ function move(event) {
 ==========================================================================*/
 line.addEventListener('click', move);
 
-window.addEventListener('resize', mobileTouch);
+window.addEventListener('resize', function(){
+  parentWidth = parent.clientWidth
+  mobileTouch();
+});
 
 
 
