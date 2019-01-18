@@ -135,7 +135,10 @@ function mobileTouch() {
     line.addEventListener('touchstart', move)
     circle.addEventListener('touchstart', function () {
       window.addEventListener('touchmove', move);
-    })
+    });
+    circle.addEventListener('touchend', function () {
+      window.removeEventListener('touchmove', move);
+    });
   }
 }
 
