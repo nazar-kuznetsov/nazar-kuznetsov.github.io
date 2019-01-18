@@ -46,11 +46,11 @@ h2 {
     background-color: #E4E4E4;
     position: relative;
     cursor: pointer;
-    user-select: none;
+    /* user-select: none; */
 }
 
 .line-active {
-    user-select: none;
+    /* user-select: none; */
     background-color: #8C98F8;
     height: 4px;
     width: 0;
