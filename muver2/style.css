@@ -55,6 +55,10 @@ html {
     box-sizing: inherit;
 }
 
+.main {
+    padding: 50px 0;
+}
+
 body {
     font-family: 'Gilroy';
 
@@ -66,6 +70,10 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 30px;
+}
+
+pre {
+    font-size: 15px;
 }
 
 h2 {
@@ -83,6 +91,7 @@ h2 {
 
 .section-svg {
     display: none;
+    position: relative;
 }
 
 .show {
@@ -149,9 +158,9 @@ section {
 }
 
 .slogan-text {
-    color: #333;
+    color: #213AF9;
     text-align: center;
-    /* font-weight: 500; */
+    /* font-weight: bold; */
     font-size: 20px;
     opacity: 0;
     padding: 20px 0;
@@ -280,7 +289,6 @@ section {
 .brain-list li {
     position: relative;
     padding: 50px;
-    /* margin-bottom: 50px; */
     color: #DDDDDD;
     cursor: pointer;
 }
@@ -288,6 +296,8 @@ section {
 .brain-list li.active {
     color: #555;
 }
+
+
 
 .brain-list li.active::after {
     content: '';
@@ -340,12 +350,12 @@ section {
     list-style: none;
     position: absolute;
     top: 50px;
-    right: 0;
+    right: -250px;
 }
 
 .wheel-scroll .brain-svg ul {
     position: fixed;
-    right: 0;
+    right: 200px;
     
 }
 

@@ -4,7 +4,7 @@ const circle = document.querySelector('#js-circle'); // кружок
 const jsLine = document.querySelector('#js-line-active'); // линия активная
 const line = document.querySelector('.line'); // линия не активная
 const jsTitle1 = document.querySelector('#js-title1'); // заголовок 1
-
+var delay = 500;
 const lineWidth = line.clientWidth; // ширина линии
 let parentWidth = parent.clientWidth; // ширина родителя
 const sectionSVG = document.querySelector('.section-svg'); // секция другая
@@ -68,7 +68,7 @@ const end = () => {
     sectionSVG.classList.add('show');
     firstSection.classList.remove('show');
     parent.classList.remove('active');
-  }, 300); // задержка после того как кружок попал в конец 
+  }, delay); // задержка после того как кружок попал в конец 
 
 }
 
@@ -187,7 +187,6 @@ var brain_li = document.querySelectorAll('.brain-list li'); // элементы 
 var brainSVG = document.querySelectorAll('.brain-svg ul li'); // элементы svg
 let counderBrain = 0; // количество прокруток в секции с черепом
 var circleHead = document.querySelectorAll('.head-circle');
-// circleHead[counderBrain].classList.add('active');
 
 function activeElement(index) {
   brain_li[index].classList.add('active');
@@ -199,7 +198,6 @@ activeElement(counderBrain);
 // клик элемент списка
 brain_li.forEach(function (element, index) {
   element.addEventListener('click', function () {
-    console.log(123);
     document.body.classList.add('wheel-scroll');
     window.addEventListener('mousewheel', calcStepScroll);
     activeElementScroll(index);
