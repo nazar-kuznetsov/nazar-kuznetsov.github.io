@@ -96,9 +96,10 @@ function move(event) {
   const left = offset.left;
   let distance = Math.round(left / parentWidth * 100);
 
-  let positonLeft = Math.round(distance / 2);
+  let positonLeft = Math.round(distance / 2.4);
 
-  if (positonLeft >= 43) {
+  if (positonLeft >= 38) {
+    console.log(true);
     handleText.classList.add('hide');
     slogan.classList.add('is-visibly');
 
@@ -107,7 +108,7 @@ function move(event) {
     handleText.classList.remove('hide');
 
   }
-  if (positonLeft > 0 && positonLeft < 43) {
+  if (positonLeft > 0 && positonLeft < 45) {
     jsTitle2.style.right = positonLeft + '%';
     jsTitle1.style.left = positonLeft + '%';
   }
@@ -123,7 +124,7 @@ function move(event) {
     parent.classList.add('active');
   }
 
-  styling((distance / 2 + 5) / letter);
+   styling((distance / 2 + 15) / letter);
 
   if (distance >= 100) { // удалить собития движения мишки
     window.removeEventListener('mousemove', move);
@@ -197,7 +198,7 @@ activeElement(counderBrain);
 
 // клик элемент списка
 brain_li.forEach(function (element, index) {
-  element.addEventListener('click', function () {
+  element.addEventListener('click', function () {   
     document.body.classList.add('wheel-scroll');
     window.addEventListener('mousewheel', calcStepScroll);
     activeElementScroll(index);
