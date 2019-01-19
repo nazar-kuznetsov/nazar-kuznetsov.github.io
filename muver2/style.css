@@ -158,17 +158,17 @@ section {
 }
 
 .slogan-text {
-    color: #213AF9;
+    color: #ddd;
     text-align: center;
     /* font-weight: bold; */
-    font-size: 20px;
+    font-size: 34px;
     opacity: 0;
     padding: 20px 0;
 }
 
 .slogan-text.is-visibly {
     opacity: 1;
-    transition: opacity 0.3s;
+    /* transition: opacity 0.3s; */
 }
 
 .handle.end .slogan-text {
