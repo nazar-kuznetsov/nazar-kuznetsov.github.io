@@ -1,0 +1,392 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('Gilroy-Light.woff2') format('woff2'),
+        url('Gilroy-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('Gilroy-ExtraBold.woff2') format('woff2'),
+        url('Gilroy-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('Gilroy-ExtraBold.woff2') format('woff2'),
+        url('Gilroy-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('Gilroy-Light.woff2') format('woff2'),
+        url('Gilroy-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('Gilroy-Light.woff2') format('woff2'),
+        url('Gilroy-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('Gilroy-ExtraBold.woff2') format('woff2'),
+        url('Gilroy-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.main {
+    padding: 50px 0;
+}
+
+body {
+    font-family: 'Gilroy';
+
+    color: #555;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+pre {
+    font-size: 15px;
+}
+
+h2 {
+    margin-bottom: 50px;
+    text-align: center;
+    color: #555;
+    font-weight: 500;
+}
+
+.handle {
+    max-width: 550px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-svg {
+    display: none;
+    position: relative;
+}
+
+.show {
+    display: block;
+}
+
+.line {
+    height: 4px;
+    background-color: #E4E4E4;
+    position: relative;
+    cursor: pointer;
+    /* user-select: none; */
+}
+
+.line-active {
+    /* user-select: none; */
+    background-color: #8C98F8;
+    height: 4px;
+    width: 0;
+}
+
+button {
+    background-color: #213AF9;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+section {
+    padding: 50px 0;
+}
+
+.line:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: -4px;
+    width: 10px;
+    height: 10px;
+    background-color: #213AF9;
+    border-radius: 50%;
+}
+
+.circle {
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    user-select: none;
+    margin-top: -18px;
+    margin-left: -18px;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #7e87cc;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.slogan-text {
+    color: #ddd;
+    text-align: center;
+    /* font-weight: bold; */
+    font-size: 34px;
+    opacity: 0;
+    padding: 20px 0;
+}
+
+.slogan-text.is-visibly {
+    opacity: 1;
+    /* transition: opacity 0.3s; */
+}
+
+.handle.end .slogan-text {
+    opacity: 1;
+}
+
+.handle__text {
+    display: flex;
+    padding: 20px 0;
+    /* width: 50%; */
+    width: 100%;
+    /* font-weight: bold; */
+    transition: 0.3s;
+    user-select: none;
+    position: relative;
+    font-size: 18px;
+    color: #333;
+}
+
+
+
+.handle__text p {
+    position: absolute;
+}
+
+.handle__text p:nth-child(1) {
+    transform: translateX(-50%);
+    left: 0;
+}
+
+.handle__text p:nth-child(2) {
+
+    right: 0;
+    transform: translateX(50%);
+  
+}
+
+
+
+.handle.active .handle__text {
+    padding: 20px 60px;
+}
+
+
+.circle__end {
+    left: auto;
+    right: 0;
+    z-index: 1;
+    
+    border: 1px solid #DDDDDD;
+}
+
+
+
+
+
+
+
+.circle::after {
+    content: '';
+    display: block;
+    left: 50%;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+    margin-left: -9px;
+    border-radius: 50%;
+    background-color:#213AF9; 
+    position: absolute;
+
+}
+
+.circle__end::after {
+    background-color: #DDDDDD;
+}
+
+.bold {
+    color: red;
+    font-weight: bold;
+}
+
+/* Стили для первой букву правого заголвока */
+.handle.active  .hight {
+    color: red;
+    font-weight: bold
+}
+
+
+
+/* ============================== СЕКЦИЯ С ГОЛОВОЙ======================================= */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.section-svg {
+    position: relative;
+    margin-bottom: 100px;
+    /* padding: 100px 0;  */
+}
+
+.section-svg.container {
+    max-width: 600px;
+}
+
+.brain-list {
+    list-style: none;
+    /* border-left: 1px solid #ddd; */
+}
+
+.brain-list li {
+    position: relative;
+    padding: 65px;
+    color: #DDDDDD;
+    cursor: pointer;
+}
+
+.brain-list li.active {
+    color: #555;
+}
+
+
+
+.brain-list li.active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 3;
+    margin-top: -25px;
+    margin-left: -25px;
+    width: 50px;
+    height: 50px;
+    background-color: #213AF9;
+    border: 12px solid #fff;
+    border-radius: 50%;
+}
+
+.brain-list li.active::before {
+    content: '';
+    width: 50px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 3;
+    height: 50px;
+    margin-top: -25px;
+    margin-left: -25px;
+    z-index: 5;
+    border-radius: 50%;
+    border: 1px solid blue;
+}
+
+.brain-list li span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 10px;
+    transform: translate(-50%, -50%);
+    height: 10px;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.brain-list li span.active {
+    background-color: #213AF9;
+}
+
+.brain-svg ul {
+    list-style: none;
+    position: absolute;
+    top: 80px;
+    right: -250px;
+}
+
+.wheel-scroll .brain-svg ul {
+    position: fixed;
+    right: 200px;
+    
+}
+
+.brain-svg ul li {
+    display: none;
+}
+
+
+.brain-svg ul li.active {
+    display: block;
+}
+
+.content-brain {
+    position: relative;
+}
+
+.line-svg-active {
+    width: 2px;
+    top: 88px;
+    left: 0;
+    z-index: 1;
+     /* height: 20%; */
+     background-color: #213AF9;
+    position: absolute;
+
+}
+.line-svg-static {
+    position: absolute;
+    left: 0;
+    top: 88px;
+    width: 2px;
+    background-color: rgba(196, 196, 196, 0.75);
+    height: 80%;
+    /* width: 1px; */
+}
+
+
+.hide {
+    display: none;
+}
