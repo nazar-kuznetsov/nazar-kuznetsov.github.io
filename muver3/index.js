@@ -17,7 +17,7 @@ var slogan = document.querySelector('.slogan-text');
 let scrollTop;
 var deltaY;
 
-/* Копирует текст 
+/* Копирует текст
 ==========================================================================*/
 let newStr1 = jsTitle1.textContent;
 let newStr2 = jsTitle1.textContent;
@@ -53,6 +53,7 @@ const styling = (position) => {
 let timerID;
 
 function myFuncti(e) {
+  console.log(123);
   deltaY = e.deltaY;
 }
 
@@ -61,7 +62,7 @@ function testing(e) {
   calcStepScroll();
 }
 
-window.addEventListener('wheel', myFuncti);
+window.addEventListener('mousewheel', myFuncti);
 /* Переход на жругую страницу
 ==========================================================================*/
 const end = () => {
@@ -69,15 +70,15 @@ const end = () => {
   jsLine.style.width = `${parentWidth - 18}px`;
   clearInterval(timerID);
 
-  
+
   parent.classList.add('end');
   timerID = setTimeout(() => {
-    window.addEventListener('wheel', debounce(testing));
+    window.addEventListener('mousewheel', debounce(testing));
     firstSection.classList.add('hide');
     sectionSVG.classList.add('show');
     firstSection.classList.remove('show');
     parent.classList.remove('active');
-  }, delay); // задержка после того как кружок попал в конец 
+  }, delay); // задержка после того как кружок попал в конец
 
 }
 
@@ -206,9 +207,9 @@ activeElement(counderBrain);
 
 // клик элемент списка
 brain_li.forEach(function (element, index) {
-  element.addEventListener('click', function () {   
+  element.addEventListener('click', function () {
     document.body.classList.add('wheel-scroll');
-    window.addEventListener('wheel', debounce(testing));
+    window.addEventListener('mousewheel', debounce(testing));
     activeElementScroll(index);
     agree = false;
   });
@@ -221,7 +222,7 @@ function calcStepScroll(event) {
 
   if (counderBrain === brain_li.length) {
     agree = true;
-    window.removeEventListener('wheel', calcStepScroll);
+    window.removeEventListener('mousewheel', calcStepScroll);
     return;
   }
 
@@ -258,7 +259,7 @@ function scrollAnimation() {
   const sectionTop = sectionSVG.offsetTop;
   if (scrollTop > sectionTop && scrollTop + 290 < (sectionTop + sectionSVG.clientHeight) && !agree) {
     document.body.classList.add('wheel-scroll');
-    
+
   } else {
     document.body.classList.remove('wheel-scroll');
   }
