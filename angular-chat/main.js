@@ -74,7 +74,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"header\">Входящие</header>\n<main class=\"main\">\n    <app-chat-nav (showMessage)=\"showMessage($event)\"></app-chat-nav>\n\n    <div class=\"section\">\n        <app-chat-message\n            (addMessage)=\"addMessage($event)\"\n            [user]=\"user\"\n            [messages]=\"messages\"\n        >\n        </app-chat-message>\n    </div>\n</main>\n"
+module.exports = "<header class=\"header\">\n    <span>Входящие</span>\n    <img src=\"http://salacioussound.com/wp-content/uploads/2013/09/Dr.Dre-7.31.2012-390x390.jpg\" alt=\"\">\n</header>\n<main class=\"main\">\n    <app-chat-nav (showMessage)=\"showMessage($event)\"></app-chat-nav>\n\n    <div class=\"section\">\n        <app-chat-message\n            (addMessage)=\"addMessage($event)\"\n            [user]=\"user\"\n            [messages]=\"messages\"\n        >\n        </app-chat-message>\n    </div>\n</main>\n"
 
 /***/ }),
 
@@ -472,7 +472,7 @@ var ChatService = /** @class */ (function () {
         return this.db.list("/dialogues/" + this.name + "/dialogs").valueChanges();
     };
     ChatService.prototype.addMessage = function (text, isBot, done) {
-        this.db.list("/dialogues/" + this.name + "/dialogs").push({ message: text, bot: isBot }).then(done);
+        this.db.list("/dialogues/" + this.name + "/dialogs").push({ message: text, bot: isBot }).then(function () { return done(); });
         this.db.object("/chats/" + this.currentChat).update({ lastMessage: text });
     };
     ChatService.prototype.botAnswer = function (done) {
