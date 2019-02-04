@@ -22,21 +22,6 @@ var deltaY;
 let newStr1 = jsTitle1.textContent;
 let newStr2 = jsTitle1.textContent;
 
-/* Клик на на кнопку вернуться назад
-==========================================================================*/
-// jsBack.addEventListener('click', function () {
-//   firstSection.classList.add('show');
-//   sectionSVG.classList.remove('show');
-//   circle.style.left = 0;
-//   jsLine.style.width = 0;
-//   firstSection  .classList.remove('hide');
-//   jsTitle1.innerHTML = newStr1;
-//   document.body.classList.remove('wheel-scroll');
-//   parent.classList.remove('end');
-//   handleText.classList.remove('hide');
-//   slogan.classList.remove('is-visibly');
-// })
-
 /* Делим ширину родительсокго блока на длину текста
 ==========================================================================*/
 const titles = {
@@ -53,7 +38,6 @@ const styling = (position) => {
 let timerID;
 
 function myFuncti(e) {
-  console.log(123);
   deltaY = e.deltaY;
 }
 
@@ -73,11 +57,14 @@ const end = () => {
 
   parent.classList.add('end');
   timerID = setTimeout(() => {
+
     window.addEventListener('mousewheel', debounce(testing));
+
     firstSection.classList.add('hide');
     sectionSVG.classList.add('show');
     firstSection.classList.remove('show');
     parent.classList.remove('active');
+
   }, delay); // задержка после того как кружок попал в конец
 
 }
@@ -133,7 +120,7 @@ function move(event) {
     parent.classList.add('active');
   }
 
-   styling((distance / 2 + 15) / letter);
+  styling((distance / 2 + 15) / letter);
 
   if (distance >= 100) { // удалить собития движения мишки
     window.removeEventListener('mousemove', move);
@@ -271,15 +258,15 @@ function debounce(func, wait = 250, immediate = true) {
 
   var timeout;
   return function (e) {
-      var context = this, args = e;
-      var later = function () {
-          timeout = null;
-          if (!immediate) func.apply(context, args);
-      };
-      var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
+    var context = this, args = e;
+    var later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
   };
 };
 
