@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Dr. Dre | Контакты</title>
+  <meta charset="UTF-8">
+  <!-- Description of the site -->
+  <meta name="description" content="Описание">
+  <meta name="keywords" content="Ключевые Слова">
+  <meta name="author" content="Nazar Kuznetsov">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Шапка сайта -->
+  <header class="header">
+
+    <div class="container-big">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+          <li class="nav__item active"><a class="nav__link" href="contact.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container">
+      <article class="intro">
+        <h1 class="main-title">Контакты</h1>
+        <p class="description">Для всех предложение оставьте пожалуйста <span>заявку</span></p>
+      </article>
+    </div>
+
+  </header>
+
+
+  <!-- Главное содержимое страницы -->
+  <main class="main">
+    <div class="container">
+      <h2 class="title">Офис</h2>
+
+
+      <div class="route">
+        <div class="contact">
+          <ul class="contact__list">
+            <li class="contact__item contact-route">
+              <a href="https://goo.gl/maps/JFXGHGyJhKz" class="contact__link" target="_blank">
+                <span> 285 Fulton St</span>
+                <span>New York, NY 10007</span>
+                <span>США</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="contact">
+          <ul class="contact__list">
+            <li class="contact__item">
+              <a href="tel:9696661234" class="contact__link">
+              <span>P:</span>
+              <span>(969) 666-1234</span>
+              </a>
+            </li>
+            <li class="contact__item">
+              <a href="mailto:aftermath@gmail.com" class="contact__link">
+                <span>M:</span>
+                <span class="underline">aftermath@gmail.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="contact-info">
+        <h2 class="title">Краткость — сестра таланта</h2>
+        <p>
+          Я получаю тонну электронной почты, поэтому, если я не отвечаю, это не значит,
+          что я не смотрел ваше работу или не читал вашу электронную почту. Я смотрю на
+          все электронные письма, просто сложно ответить всем. И если вы можете,
+          пожалуйста, держите письмо коротким. Спасибо!
+        </p>
+      </section>
+
+      <div class="contact-form">
+        <form action="#" method="post">
+          <div class="form-group equally">
+            <div class="form-element">
+              <label>Имя
+                <input type="text" required minlength="2">
+              </label>
+            </div>
+            <div class="form-element">
+              <label>Email
+                <input type="email" required>
+              </label>
+            </div>
+          </div>
+          <div class="form-group full-row">
+            <div class="form-element">
+              <label>Тема
+                <input type="text" required minlength="2">
+              </label>
+            </div>
+          </div>
+          <div class="form-group full-row">
+            <div class="form-element">
+              <label>Сообщение
+                <textarea type="text" required minlength="10"></textarea>
+              </label>
+            </div>
+          </div>
+          <button class="underline">Отправить</button>
+          </form>
+
+      </div>
+
+    </div><!-- container -->
+    <aside id="map"></aside>
+  </main>
+
+  <!-- Подвал сайта -->
+  <footer class="footer">
+    <div class="container-big">
+      <div class="social">
+        <ul class="social__list">
+          <li class="social__item"><a class="social__link fab fa-facebook-f" href="https://www.facebook.com/DrDre" target="_blank"></a></li>
+          <li class="social__item"><a class="social__link fab fa-twitter" href="https://twitter.com/drdre" target="_blank"></a></li>
+          <li class="social__item"><a class="social__link fab fa-linkedin-in" href="https://www.linkedin.com/company/beats-by-dr.-dre" target="_blank"></a></li>
+        </ul>
+        <a class="back-to-top" href="#">Back to top</a>
+      </div>
+    </div>
+
+  </footer>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKqbrvha4p20QERUocxfrpfESrUarPZuQ"></script>
+  <script src="js/scripts.min.js"></script>
+</body>
+
+</html>
