@@ -1,0 +1,53 @@
+.header {
+  background-color: #364555;
+  &__content {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    min-width: 300px;
+
+    a {
+      padding: 7px 20px;
+
+      transition: .3s;
+      text-decoration: none;
+      letter-spacing: 2px;
+
+// text-transform: uppercase;
+
+      color: #fff;
+      border-radius: 15px 15px 15px 0;
+      background-color: #ff680a;
+
+      font-size: 19px;
+      font-weight: 500;
+    }
+
+    &-icon {
+      margin-left: 10px;
+    }
+  }
+
+  &__search {
+    margin: 0 15px;
+  }
+
+  &__actions {
+    display: flex;
+
+    min-width: 300px;
+
+    text-align: right;
+
+    color: #fff;
+
+    justify-content: space-around;
+    a {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.details {
+  &__spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    margin-top: -45px;
+    margin-left: -45px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    color: #333;
+
+    font-size: 25px;
+    span {
+      color: rgba(0, 0, 0, .54);
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+  }
+}

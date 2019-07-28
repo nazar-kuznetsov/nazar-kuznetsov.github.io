@@ -1,0 +1,67 @@
+.phone-details {
+  &__title {
+    padding-bottom: 20px;
+
+    background-color: #fafafa;
+  }
+
+  &__image {
+    display: block;
+  }
+
+  &__price {
+    margin-bottom: 5px;
+
+    font-size: 36px;
+  }
+
+  &__icon {
+    img {
+      display: block;
+
+      width: 35px;
+    }
+  }
+
+  &__list li {
+    margin-bottom: 20px;
+  }
+
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 15px;
+
+    font-size: 12px;
+
+    > span:first-child {
+      color: rgba(0,0,0,.54);
+    }
+  }
+
+  .col-4 {
+    display: flex;
+  }
+
+
+
+  .slick-list {
+    img {
+      max-height: 415px;
+      margin: 0 auto;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+
+.add-favorites {
+  margin-bottom: 15px;
+  span {
+    text-decoration: none;
+
+    color: #007acc;
+  }
+}
