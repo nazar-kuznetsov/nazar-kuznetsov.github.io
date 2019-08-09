@@ -29,6 +29,19 @@
     z-index: 1;
 }
 
+button {
+    background-color: #007ACC;
+    padding: 20px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transform: translateX(-50%);
+}
+
+button:hover {
+    background-color: #1E1E1E;
+}
+
 .slider-2 {
     position: relative;
     height: 650px;
