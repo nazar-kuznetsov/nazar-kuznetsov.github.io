@@ -9,13 +9,13 @@ class Slider {
     }
     next() {
         if (this.index === this.children_element_count - 1) return;
-        this.items[this.index].style.clip = 'rect(0 0 auto 0)';
+        this.items[this.index].style.clip = 'rect(0 0 500px 0)';
         this.index += 1;
     }
     prev() {
         if (this.index === 0) return;
         this.index -= 1;
-        this.items[this.index].style.clip = 'rect(0 1200px auto 0)';
+        this.items[this.index].style.clip = 'rect(0 900px 500px 0)';
     }
     init() {
         let couter = this.items.length - 1;
@@ -25,6 +25,5 @@ class Slider {
         }
         this.button_next.addEventListener('click', this.next.bind(this));
         this.button_prev.addEventListener('click', this.prev.bind(this));
-
     }
 }
