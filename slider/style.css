@@ -17,7 +17,7 @@ li {
 .slider-conteiner {
     width: 1200px;
     height: 450px;
-
+    position: relative;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -51,10 +51,14 @@ li {
     transition-delay: 0.5s
 }
 
+.react img {
+    transform: scale(1.04);
+}
+
 
 .slider {
     display: flex;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     position: relative;
 }
@@ -83,12 +87,37 @@ li {
     transform: translateX(0%);
 }
 
-
 .slider img {
     height: 100%;
     width: 1200px;
+    transition: 4s;
+    transition-delay: 1s;
     object-fit: cover;
     display: block;
+}
+
+.slider-dots {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    z-index: 1000;
+    align-items: flex-end;
+    flex-direction: column;
+
+}
+
+.slider-dots span {
+    background-color: red;
+    width: 35px;
+    transition: .5s;
+    margin-bottom: 10px;
+    height: 3px;
+
+}
+
+.slider-dots span.active {
+    width: 100px;
 }
 
 .slider-controll button {
