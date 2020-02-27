@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+html {
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
 
 li {
     list-style: none;
@@ -22,8 +27,30 @@ li {
     display: flex;
     justify-content: center;
     margin: 25px 0;
-
 }
+
+.content {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    color: #000;
+    background-color: #fff;
+    padding: 10px;
+    font-size: 30px;
+    transition: transform 1.5s, opacity 1s;
+    /* transition-delay: 0.5s; */
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+
+.react .content {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition-delay: 0.5s
+}
+
 
 .slider {
     display: flex;
@@ -80,3 +107,4 @@ li {
 .active {
     z-index: 2 !important;
 }
+

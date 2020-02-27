@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const button_prev = document.querySelector('#button_prev');
-    const button_next = document.querySelector('#button_next');
 
     class Slider {
         constructor({ slider, button_next, button_prev, slider_count }) {
@@ -34,7 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             this.addClass();
 
-            this.children[this.index].addEventListener('transitionend', () => {
+            this.children[this.index].addEventListener('transitionend', (event) => {
+                if (!event.target.classList.contains('react')) return;
 
                 if (this.children[this.index - 1]) {
                     this.children[this.index - 1].style.transform = 'translateX(-100%)';
@@ -50,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 this.moving = false;
 
-            });
+            }, true);
 
             this.move();
         }
@@ -68,15 +67,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
             this.children[this.index].style.zIndex = 999;
 
-            this.children[this.index].addEventListener('transitionend', () => {
-
+            this.children[this.index].addEventListener('transitionend', (event) => {
+                if (!event.target.classList.contains('react')) return;
                 for (let i = 0; i < this.children.length; i++) {
                     if (i !== this.index) {
                         this.children[i].style.zIndex = i;
 
                     } else {
                         this.children[i].style.zIndex = 998;
-
                     }
                 }
 
@@ -100,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
             this.slider_count = document.querySelector(this.slider_count);
             this.slider = document.querySelector(this.slider);
             this.children = this.slider.children;
-
+            this.children[this.index].classList.add('react');
             this.button_next.addEventListener('click', () => {
                 this.next();
             });
@@ -108,6 +106,8 @@ document.addEventListener('DOMContentLoaded', function () {
             this.button_prev.addEventListener('click', () => {
                 this.prev();
             });
+
+
 
         }
 
