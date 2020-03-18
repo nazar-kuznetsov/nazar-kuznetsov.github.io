@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькултор</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 750px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 0 15px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        textarea {
+            display: block;
+            padding: 15px;
+            width: 100%;
+            margin-bottom: 25px;
+            height: 150px;
+        }
+
+        button {
+            background-color: #007ACC;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 20px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #135b8b;
+        }
+
+        #summa {
+            color: brown;
+            font-size: 35px;
+
+        }
+
+        p {
+            display: flex;
+        }
+
+        b {
+            text-align: center;
+            min-width: 100px;
+            padding: 0 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <p><small>Считает только положительные цифры</small></p>
+    <small>Пример: цифры должни иметь следующий формат<br> 1 5.34 85.02 12 63.65</small>
+    <p><small>Для разделителя между значениями используйте пробел</small></p>
+    <textarea id="input" name="" id="" cols="30" rows="10" placeholder="Введите значения"></textarea>
+    <button id="button">Считать</button>
+    <p id="summa">Общая сумма:</p>
+    <ol id="ul">
+
+    </ol>
+
+    <script>
+        var button = document.querySelector('#button');
+
+        var input = document.querySelector('#input');
+        var ul = document.querySelector('#ul');
+        var summa = document.querySelector('#summa');
+
+
+        button.addEventListener('click', function () {
+            var arr = input.value.replace(/ /g, ',').split(',');
+            ul.innerHTML = '';
+            let total = 0;
+            for (let i = 0; i < arr.length; i++) {
+                var li = document.createElement('li');
+                total += Number(arr[i]);
+                li.innerHTML = `<p>Значения: <b>${arr[i]}</b> <span>Сумма: <b>${total.toFixed(2)}</b></span> </p>`;
+                ul.appendChild(li);
+            }
+
+
+            summa.textContent = `Общая сумма: ${total.toFixed(2)}`;
+
+        })
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
